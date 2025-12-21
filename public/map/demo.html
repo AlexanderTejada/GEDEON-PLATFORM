@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #mapa-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <object data="mapa.html" type="image/svg+xml" id="mapa-svg"></object>
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        // Esperar a que el SVG cargue
+        document.getElementById('mapa-svg').addEventListener('load', function () {
+            const svgDoc = this.contentDocument;
+            const paths = svgDoc.querySelectorAll('path');
+            const distritoInfo = document.getElementById('distrito-info');
+            const tooltip = document.getElementById('tooltip');
+            let distritoActual = null;
+
+            // Nombres de distritos - PERSONALIZA AQUÍ LOS 36 NOMBRES
+            const nombreDistritos = [
+                'Distrito 1',   // Path 1
+                'Distrito 2',   // Path 2
+                'Distrito 3',   // Path 3
+                'Distrito 4',   // Path 4
+                'Distrito 5',   // Path 5
+                'Distrito 6',   // Path 6
+                'Distrito 7',   // Path 7
+                'Distrito 8',   // Path 8
+                'Distrito 9',   // Path 9
+                'Distrito 10',  // Path 10
+                'Distrito 11',  // Path 11
+                'Distrito 12',  // Path 12
+                'Distrito 13',  // Path 13
+                'Distrito 14',  // Path 14
+                'Distrito 15',  // Path 15
+                'Distrito 16',  // Path 16
+                'Distrito 17',  // Path 17
+                'Distrito 18',  // Path 18
+                'Albardon',  // Path 19
+                'Angaco',  // Path 20
+                'Calingasta',  // Path 21
+                '9 de Julio',  // Path 22
+                'Caucete',  // Path 23
+                'Chimbas',  // Path 24
+                'Iglesia',  // Path 25
+                'jachal',  // Path 26
+                'Pocito',  // Path 27
+                'Rawson',  // Path 28
+                'Rivadavia',  // Path 29
+                'San Martin',  // Path 30
+                'Santa Lucia',  // Path 31
+                'Zonda',  // Path 32
+                'ullum',  // Path 33
+                'Valle Fértil',  // Path 34
+                '25 de Mayo',  // Path 35
+                'Zonda'   // Path 36
+            ];
+
+            paths.forEach((path, index) => {
+                // Asignar ID único a cada distrito
+                path.setAttribute('data-distrito', `distrito-${index + 1}`);
+                path.setAttribute('data-nombre', nombreDistritos[index] || `Distrito ${index + 1}`);
+
+                // Evento hover - mostrar tooltip
+                path.addEventListener('mouseenter', function (e) {
+                    const nombre = this.getAttribute('data-nombre');
+                    tooltip.textContent = nombre;
+                    tooltip.classList.add('show');
+                });
+
+                path.addEventListener('mousemove', function (e) {
+                    tooltip.style.left = (e.pageX + 10) + 'px';
+                    tooltip.style.top = (e.pageY + 10) + 'px';
+                });
+
+                path.addEventListener('mouseleave', function () {
+                    tooltip.classList.remove('show');
+                });
+
+                // Evento click - seleccionar distrito
+                path.addEventListener('click', function () {
+                    const nombre = this.getAttribute('data-nombre');
+
+                    // Remover selección anterior
+                    if (distritoActual) {
+                        distritoActual.classList.remove('distrito-seleccionado');
+                    }
+
+                    // Seleccionar nuevo distrito
+                    this.classList.add('distrito-seleccionado');
+                    distritoActual = this;
+                    distritoInfo.textContent = nombre;
+
+                    // Aquí puedes agregar más funcionalidad
+                    console.log('Distrito seleccionado:', nombre);
+                });
+            });
+
+            console.log(`Mapa cargado con ${paths.length} distritos`);
+        });
+    </script>
+</body>
+
+</html>
