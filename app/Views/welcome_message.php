@@ -42,7 +42,9 @@
         /* Base & Reset */
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             background-color: var(--light-bg);
@@ -50,6 +52,31 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
             line-height: 1.6;
+        }
+
+        /* Scrollbar personalizado global */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-card);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #f0b323 0%, #db9d14 100%);
+            border-radius: 6px;
+            border: 3px solid var(--dark-card);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #db9d14 0%, #f0b323 100%);
+        }
+
+        /* Para Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #f0b323 var(--dark-card);
         }
 
         h1, h2, h3, h4, h5 {
@@ -276,20 +303,6 @@
             pointer-events: none;
         }
 
-        /* Decoration */
-        .scroll-down {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            opacity: 0.6;
-            animation: bounce 2s infinite;
-            color: var(--dark-text);
-        }
 
         /* Stats Section - Dark for contrast */
         .stats {
@@ -579,11 +592,6 @@
             to { opacity: 1; }
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
-            40% {transform: translateY(-10px) translateX(-50%);}
-            60% {transform: translateY(-5px) translateX(-50%);}
-        }
 
         .reveal-on-scroll {
             opacity: 0;
@@ -623,6 +631,7 @@
             justify-content: center;
             align-items: center;
             background: radial-gradient(circle at center, rgba(240, 179, 35, 0.05) 0%, transparent 70%);
+            overflow: hidden;
         }
 
         .san-juan-map {
@@ -631,7 +640,7 @@
             max-width: 100%;
             filter: drop-shadow(0 0 20px rgba(0,0,0,0.1));
             border-radius: 12px;
-            overflow: hidden;
+            overflow: hidden !important;
         }
 
         #mapa-interactivo {
@@ -639,6 +648,27 @@
             background: rgba(10, 22, 40, 0.5);
             width: 100%;
             height: 100%;
+            overflow: hidden !important;
+        }
+
+
+        .map-interface::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .map-interface::-webkit-scrollbar-track {
+            background: rgba(26, 36, 56, 0.3);
+            border-radius: 10px;
+        }
+
+        .map-interface::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #f0b323 0%, #db9d14 100%);
+            border-radius: 10px;
+            border: 2px solid rgba(26, 36, 56, 0.3);
+        }
+
+        .map-interface::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #db9d14 0%, #f0b323 100%);
         }
 
         .map-node {
@@ -663,6 +693,31 @@
             background: rgba(10, 15, 30, 0.95);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             color: var(--dark-text);
+        }
+
+        .map-list {
+            max-height: 700px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        /* Custom Scrollbar for Map List */
+        .map-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .map-list::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+        }
+
+        .map-list::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 3px;
+        }
+
+        .map-list::-webkit-scrollbar-thumb:hover {
+            background: #d49a1f;
         }
 
         .map-list .loc-item {
@@ -892,14 +947,9 @@
             <div class="video-container">
                 <div class="video-wrapper">
                     <!-- YouTube Embed clean -->
-                    <iframe width="1895" height="782" src="https://www.youtube.com/embed/E5sJoCWIEe4" title="Private Security Services" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+                    <iframe width="1895" height="734" src="https://www.youtube.com/embed/sahwo4JdVzs" title="Cómo se fabrica el motor de caza más potente del mundo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
-        </div>
-        <div class="scroll-down">
-            <span style="font-size: 0.7rem; letter-spacing: 2px;">SCROLL</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
         </div>
     </header>
 
@@ -1335,7 +1385,7 @@
 
             // Mapeo de nombres de ubicaciones a paths del SVG
             const locationToPath = {
-                'San Juan Capital': 28, // Rawson (capital)
+                'San Juan Capital': 31, // Santa Lucia (capital)
                 'Rodeo (Iglesia)': 25,  // Iglesia
                 'Jáchal': 26,           // jachal
                 'Valle Fértil': 34,     // Valle Fértil
@@ -1346,6 +1396,7 @@
             mapaObject.addEventListener('load', function() {
                 const svgDoc = this.contentDocument;
                 const paths = svgDoc.querySelectorAll('path');
+                const svg = svgDoc.querySelector('svg');
 
                 // Deshabilitar todos los paths por defecto
                 paths.forEach((path, index) => {
@@ -1363,6 +1414,46 @@
 
                         // Obtener nombre de la ubicación
                         const locationName = Object.keys(locationToPath).find(key => locationToPath[key] === pathNumber);
+
+                        // Obtener el centro del path (bounding box)
+                        const bbox = path.getBBox();
+                        const centerX = bbox.x + bbox.width / 2;
+                        const centerY = bbox.y + bbox.height / 2;
+
+                        // Crear círculo parpadeante
+                        const pulseCircle = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        pulseCircle.setAttribute('cx', centerX);
+                        pulseCircle.setAttribute('cy', centerY);
+                        pulseCircle.setAttribute('r', '8');
+                        pulseCircle.setAttribute('fill', '#f0b323');
+                        pulseCircle.setAttribute('opacity', '0.8');
+                        pulseCircle.style.pointerEvents = 'none';
+
+                        // Animación de pulso
+                        const animate = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'animate');
+                        animate.setAttribute('attributeName', 'r');
+                        animate.setAttribute('values', '4;12;4');
+                        animate.setAttribute('dur', '2s');
+                        animate.setAttribute('repeatCount', 'indefinite');
+                        pulseCircle.appendChild(animate);
+
+                        const animateOpacity = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'animate');
+                        animateOpacity.setAttribute('attributeName', 'opacity');
+                        animateOpacity.setAttribute('values', '0.8;0.2;0.8');
+                        animateOpacity.setAttribute('dur', '2s');
+                        animateOpacity.setAttribute('repeatCount', 'indefinite');
+                        pulseCircle.appendChild(animateOpacity);
+
+                        svg.appendChild(pulseCircle);
+
+                        // Círculo central fijo
+                        const centerCircle = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        centerCircle.setAttribute('cx', centerX);
+                        centerCircle.setAttribute('cy', centerY);
+                        centerCircle.setAttribute('r', '4');
+                        centerCircle.setAttribute('fill', '#f0b323');
+                        centerCircle.style.pointerEvents = 'none';
+                        svg.appendChild(centerCircle);
 
                         // Evento hover en el mapa
                         path.addEventListener('mouseenter', function() {
