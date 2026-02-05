@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guardian Patagonico | Seguridad Privada de Alto Nivel</title>
-    <meta name="description" content="Seguridad Privada Corporativa en San Juan. Protección de activos críticos con tecnología y personal de élite.">
+    <meta name="description" content="Seguridad Privada Corporativa en Chubut. Protección de activos críticos con tecnología y personal de élite.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1210,7 +1210,7 @@
         <div class="container stats-grid">
             <div class="stat-item">
                 <h3>Cobertura</h3>
-                <p>San Juan, Rodeo, Jáchal, Calingasta, Valle Fértil</p>
+                <p>En toda la patagonia</p>
             </div>
             <div class="stat-item">
                 <h3>24/7</h3>
@@ -1227,7 +1227,7 @@
                 <h2>Compromiso y Responsabilidad</h2>
                 <br>
                 <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">
-                    En Guardian Patagonico somos una empresa de seguridad privada con presencia en San Juan Capital, Rodeo (Iglesia), Jáchal, Calingasta, 25 de Mayo y Valle Fértil, ampliando permanentemente nuestro radio de acción en toda la provincia.<br><br>
+                    En Guardian Patagonico somos una empresa de seguridad privada con presencia en Chubut Comodoro Rivadavia.<br><br>
                     Somos una empresa seria y responsable, comprometida con la protección integral de personas, bienes e instalaciones. Contamos con un equipo preparado y capacitado con título habilitante, brindando disponibilidad 24/7 para responder a las más altas exigencias de seguridad.
                 </p>
             </div>
@@ -1313,7 +1313,7 @@
     </section>
 
     <!-- Nuestros Clientes -->
-    <section id="clientes" class="section-padding" style="background: var(--light-card); border-top: 1px solid var(--light-border); overflow: hidden;">
+    <!-- <section id="clientes" class="section-padding" style="background: var(--light-card); border-top: 1px solid var(--light-border); overflow: hidden;">
         <div class="container">
             <div class="section-header reveal-on-scroll" style="text-align: center; max-width: 800px; margin: 0 auto 4rem;">
                 <span class="section-label">Nuestros Clientes</span>
@@ -1321,10 +1321,10 @@
                 <p style="color: var(--text-muted); margin-top: 1rem;">
                     Protegemos personas, bienes e instalaciones de empresas privadas y públicas: industrias mineras, comercios, escuelas, hospitales, campamentos e instituciones estratégicas en toda la provincia.
                 </p>
-            </div>
+            </div> -->
 
             <!-- Carrusel de Clientes -->
-            <div class="clients-marquee" style="overflow: hidden; position: relative;">
+            <!-- <div class="clients-marquee" style="overflow: hidden; position: relative;">
                 <div class="marquee-container">
                     <div class="client-logo">Barrick Gold</div>
                     <div class="client-logo">Veladero</div>
@@ -1335,9 +1335,9 @@
                     <div class="client-logo">Banco San Juan</div>
                     <div class="client-logo">Minera Los Pelambres</div>
                     <div class="client-logo">Josemaría Resources</div>
-                    <div class="client-logo">Minera Casposo</div>
+                    <div class="client-logo">Minera Casposo</div> -->
                     <!-- Duplicado para loop infinito -->
-                    <div class="client-logo">Barrick Gold</div>
+                    <!-- <div class="client-logo">Barrick Gold</div>
                     <div class="client-logo">Veladero</div>
                     <div class="client-logo">Glencore</div>
                     <div class="client-logo">Gobierno de San Juan</div>
@@ -1350,199 +1350,103 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Cobertura / Mapa Interactivo -->
-    <section id="cobertura" class="section-padding map-section-bg" style="position: relative; overflow: hidden;">
-        <div class="hero-bg" style="opacity: 0.3;"></div>
-        <div class="container">
-            <div class="section-header reveal-on-scroll">
-                <span class="section-label">Cobertura Patagónica</span>
-                <h2>Despliegue Operativo en la Región</h2>
-                <p style="color: var(--text-muted); margin-top: 1rem;">
-                    Nuestra red de seguridad cubre puntos estratégicos en toda la región patagónica, asegurando respuesta rápida y coordinación centralizada.
-                </p>
-            </div>
 
-            <div class="map-interface reveal-on-scroll" style="display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr); gap: 3rem; align-items: stretch;">
-                <div class="map-visual" style="background: radial-gradient(circle at top left, rgba(0,27,58,0.18), transparent 55%), rgba(4,9,27,0.95); border-radius: 1.5rem; padding: 2.5rem; color: #fff; display: flex; flex-direction: column; justify-content: space-between; min-height: 320px;">
-                    <div>
-                        <p style="text-transform: uppercase; letter-spacing: .16em; font-size: .8rem; opacity: .8; margin-bottom: .75rem;">Cobertura actual</p>
-                        <h3 style="font-size: 1.9rem; margin-bottom: 1rem;">Operación Focalizada en Chubut</h3>
-                        <p style="max-width: 32rem; font-size: .98rem; line-height: 1.7; opacity: .9;">
-                            Coordinamos servicios de seguridad privada en los principales polos urbanos, corredores logísticos
-                            y zonas industriales de la provincia, con monitoreo permanente y respuesta rápida.
-                        </p>
+<section id="cobertura" class="section-padding" style="background-color: var(--dark-bg); position: relative;">
+    <div class="hero-pattern" style="opacity: 0.05;"></div>
+    
+    <div class="container">
+        <div class="reveal-on-scroll" style="max-width: 900px; margin: 0 auto; text-align: center;">
+            
+            <span class="section-label">Despliegue Territorial</span>
+            <h2 class="text-gradient" style="font-size: clamp(2.5rem, 4vw, 3.8rem); margin-bottom: 2rem;">Operatividad Total en Chubut</h2>
+            
+            <p style="color: var(--dark-muted); font-size: 1.2rem; line-height: 1.8; margin-bottom: 4rem;">
+                Nuestra estructura está diseñada para la movilidad táctica. Operamos directamente en los objetivos de nuestros clientes, con unidades desplegadas estratégicamente en Comodoro Rivadavia y alrededores para garantizar tiempos de respuesta inmediatos.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; text-align: left;">
+                
+                <div style="background: var(--dark-card); border: 1px solid var(--dark-border); padding: 2.5rem; border-radius: 20px; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--dark-border)'">
+                    <div style="color: var(--primary); margin-bottom: 1.5rem;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
                     </div>
-                    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                        <div style="border-radius: 1rem; background: rgba(255,255,255,0.04); padding: 1.25rem 1.1rem;">
-                            <div style="font-size: .8rem; text-transform: uppercase; letter-spacing: .14em; opacity: .75; margin-bottom: .5rem;">Bases</div>
-                            <div style="font-size: 1.4rem; font-weight: 600;">3</div>
-                            <p style="font-size: .86rem; opacity: .8; margin-top: .35rem;">Puntos operativos en el valle y la costa.</p>
-                        </div>
-                        <div style="border-radius: 1rem; background: rgba(255,255,255,0.04); padding: 1.25rem 1.1rem;">
-                            <div style="font-size: .8rem; text-transform: uppercase; letter-spacing: .14em; opacity: .75; margin-bottom: .5rem;">Cobertura</div>
-                            <div style="font-size: 1.4rem; font-weight: 600;">24/7</div>
-                            <p style="font-size: .86rem; opacity: .8; margin-top: .35rem;">Monitoreo y coordinación centralizada.</p>
-                        </div>
-                        <div style="border-radius: 1rem; background: rgba(255,255,255,0.04); padding: 1.25rem 1.1rem;">
-                            <div style="font-size: .8rem; text-transform: uppercase; letter-spacing: .14em; opacity: .75; margin-bottom: .5rem;">Sectores</div>
-                            <div style="font-size: 1.4rem; font-weight: 600;">Estrategicos</div>
-                            <p style="font-size: .86rem; opacity: .8; margin-top: .35rem;">Industrial, energético, logístico y comercial.</p>
-                        </div>
-                    </div>
+                    <h4 style="color: #fff; font-family: 'Outfit'; font-size: 1.3rem; margin-bottom: 1rem;">Unidades Móviles</h4>
+                    <p style="color: var(--dark-muted); font-size: 0.95rem;">Desplazamiento constante hacia yacimientos, barrios privados y plantas industriales sin depender de bases fijas.</p>
                 </div>
 
-                <div class="map-list" style="display: flex; flex-direction: column; gap: 1rem;">
-                    <div class="loc-item active" style="border-radius: 1.3rem; padding: 1.8rem 1.6rem; background: var(--card-bg); box-shadow: 0 18px 45px rgba(15,23,42,0.28); border: 1px solid rgba(148,163,184,0.3);">
-                        <div class="loc-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: .75rem;">
-                            <span class="loc-bulelt" style="display: inline-flex; align-items: center; justify-content: center; width: 2.2rem; height: 2.2rem; border-radius: 999px; background: rgba(15,118,110,0.12); color: var(--primary); font-weight: 600; font-size: .9rem;">01</span>
-                            <h3 style="font-size: 1.15rem;">Cobertura en Chubut</h3>
-                        </div>
-                        <p style="font-size: .94rem; color: var(--text-muted); margin-bottom: 1.1rem;">
-                            Diseño de esquemas de seguridad a medida para empresas, industrias y proyectos
-                            estratégicos en toda la provincia.
-                        </p>
-                        <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: .55rem; font-size: .9rem; color: var(--text-main);">
-                            <li>• Guardias fijos y móviles coordinados por centro de monitoreo.</li>
-                            <li>• Custodias de cargas y acompañamiento de flotas.</li>
-                            <li>• Cobertura en parques industriales y predios logísticos.</li>
-                        </ul>
+                <div style="background: var(--dark-card); border: 1px solid var(--dark-border); padding: 2.5rem; border-radius: 20px; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--dark-border)'">
+                    <div style="color: var(--primary); margin-bottom: 1.5rem;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     </div>
+                    <h4 style="color: #fff; font-family: 'Outfit'; font-size: 1.3rem; margin-bottom: 1rem;">Enfoque Comodoro</h4>
+                    <p style="color: var(--dark-muted); font-size: 0.95rem;">Priorizamos el cordón industrial del Golfo San Jorge con personal local que conoce el terreno y sus riesgos.</p>
                 </div>
+
             </div>
+
+            <div style="margin-top: 4rem;">
+                <p style="color: #fff; font-weight: 600; margin-bottom: 1.5rem;">¿Necesita seguridad en una ubicación específica?</p>
+                <a href="#contacto" class="btn-primary">Coordinar Inspección de Sitio</a>
+            </div>
+
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Noticias -->
-    <section id="noticias" class="section-padding">
-        <div class="container">
-            <div class="section-header reveal-on-scroll">
-                <span class="section-label">Novedades</span>
-                <h2>Últimas Noticias</h2>
-                <p style="margin-top: 1rem;">
-                    Mantente informado sobre nuestras últimas innovaciones, expansiones y logros en seguridad privada.
-                </p>
-            </div>
+<section id="noticias" class="section-padding" style="background-color: var(--light-bg);">
+    <div class="container">
+        <div class="section-header reveal-on-scroll">
+            <span class="section-label">Actualidad</span>
+            <h2 style="color: var(--light-text);">Portal de Noticias</h2>
+            <p style="margin-top: 1rem; color: var(--light-muted);">
+                Explore nuestras últimas actualizaciones, despliegues y avances tecnológicos en la región.
+            </p>
+        </div>
 
-            <div class="news-grid">
-                <!-- Noticia 1 -->
-                <article class="news-card reveal-on-scroll">
-                    <div class="news-image">
-                        <img src="https://picsum.photos/seed/security-tech/600/400" alt="Nueva tecnología de vigilancia">
+        <div class="news-grid">
+            <article class="news-card reveal-on-scroll">
+                <div class="news-image">
+                    <img src="https://picsum.photos/seed/patagonia-sec/600/400" alt="Operaciones Patagonia">
+                </div>
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-date">Reciente</span>
+                        <span class="news-category">Operativo</span>
                     </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-date">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                                </svg>
-                                15 Dic 2024
-                            </span>
-                            <span class="news-category">Tecnología</span>
-                        </div>
-                        <h3>Nueva Tecnología de Vigilancia en San Juan Capital</h3>
-                        <p class="news-excerpt">
-                            Implementamos sistemas de videovigilancia con IA para detección temprana de incidentes en nuestras instalaciones principales, mejorando tiempos de respuesta en un 40%.
-                        </p>
-                        <a href="/noticias" class="news-link">
-                            Leer más
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
+                    <h3>Expansión de servicios en el Golfo San Jorge</h3>
+                    <p class="news-excerpt" style="color: var(--light-muted);">
+                        Consolidamos nuestra presencia en la cuenca, optimizando los tiempos de respuesta para servicios de custodia de caudales e insumos críticos.
+                    </p>
+                </div>
+            </article>
 
-                <!-- Noticia 2 -->
-                <article class="news-card reveal-on-scroll" style="transition-delay: 0.1s">
-                    <div class="news-image">
-                        <img src="https://picsum.photos/seed/training-people/600/400" alt="Certificación internacional">
+            <article class="news-card reveal-on-scroll" style="transition-delay: 0.1s">
+                <div class="news-image">
+                    <img src="https://picsum.photos/seed/tech-guard/600/400" alt="Tecnología LPR">
+                </div>
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-date">Actualizado</span>
+                        <span class="news-category">Tecnología</span>
                     </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-date">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                                </svg>
-                                10 Dic 2024
-                            </span>
-                            <span class="news-category">Capacitación</span>
-                        </div>
-                        <h3>Certificación Internacional para Nuestro Equipo</h3>
-                        <p class="news-excerpt">
-                            Más de 50 agentes completaron exitosamente la certificación internacional en protección ejecutiva y manejo de crisis, elevando nuestros estándares de servicio.
-                        </p>
-                        <a href="/noticias" class="news-link">
-                            Leer más
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
+                    <h3>Integración de sistemas LPR y Control de Accesos</h3>
+                    <p class="news-excerpt" style="color: var(--light-muted);">
+                        Implementamos nuevas paletas electrónicas y detectores de metales de última generación en todos nuestros puestos de control de inframuros.
+                    </p>
+                </div>
+            </article>
 
-                <!-- Noticia 3 -->
-                <article class="news-card reveal-on-scroll" style="transition-delay: 0.2s">
-                    <div class="news-image">
-                        <img src="https://picsum.photos/seed/office-building/600/400" alt="Apertura de nueva base">
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-date">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                                </svg>
-                                5 Dic 2024
-                            </span>
-                            <span class="news-category">Expansión</span>
-                        </div>
-                        <h3>Apertura de Nueva Base en Valle Fértil</h3>
-                        <p class="news-excerpt">
-                            Expandimos nuestra cobertura con una base operativa en Valle Fértil, brindando respuesta inmediata a proyectos turísticos y ambientales de la zona este provincial.
-                        </p>
-                        <a href="/noticias" class="news-link">
-                            Leer más
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
+            <div class="reveal-on-scroll" style="display: flex; flex-direction: column; justify-content: center; align-items: center; background: rgba(125, 140, 69, 0.05); border: 2px dashed var(--light-border); border-radius: 16px; padding: 2rem; text-align: center; transition-delay: 0.2s">
+                <h3 style="font-size: 1.2rem; color: var(--light-text); margin-bottom: 1rem;">Más novedades en nuestro portal</h3>
+                <p style="font-size: 0.9rem; color: var(--light-muted); margin-bottom: 1.5rem;">Acceda a nuestro archivo completo de noticias, capacitaciones y comunicados oficiales.</p>
+                <a href="/noticias" class="btn-primary" style="width: 100%;">Ver todas las noticias</a>
             </div>
         </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contacto" class="contact reveal-on-scroll">
-        <div class="container">
-            <div class="contact-box">
-                <span class="section-label">Contacto</span>
-                <h2>Hablemos de Seguridad</h2>
-                <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; color: var(--text-main); font-size: 1.2rem;">
-                    <a href="mailto:info@gedeonrg.com.ar" style="font-weight: 600;">info@gedeonrg.com.ar</a>
-                    <a href="tel:2645284690" style="font-weight: 600;">264 528 4690</a>
-                    <a href="tel:2645152154" style="font-weight: 600;">264 515 2154</a>
-                    <span style="font-size: 1rem; color: var(--text-muted); margin-top: 1rem;">www.gedeonrg.com.ar</span>
-                </div>
-                <div class="cta-group" style="justify-content: center; opacity: 1; transform: none; animation: none;">
-                    <a href="mailto:info@gedeonrg.com.ar" class="btn-primary">Enviar Email</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
