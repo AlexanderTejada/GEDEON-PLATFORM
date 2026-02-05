@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEDEÓN R.G. | Seguridad Privada de Alto Nivel</title>
+    <title>Guardian Patagonico | Seguridad Privada de Alto Nivel</title>
     <meta name="description" content="Seguridad Privada Corporativa en San Juan. Protección de activos críticos con tecnología y personal de élite.">
     
     <!-- Fonts -->
@@ -13,26 +13,29 @@
     
     <style>
         :root {
-            /* Brand Colors */
-            --primary: #f0b323;
-            --primary-dim: #b8860b;
-            --gold-gradient: linear-gradient(135deg, #f0b323 0%, #db9d14 100%);
+            /* Brand Colors - Military Tactical + Gold */
+            --primary: #7D8C45;
+            --primary-dim: #5C6B2F;
+            --accent: #D4A529;
+            --accent-dim: #B8860B;
+            --gold-gradient: linear-gradient(135deg, #8B9A4B 0%, #5C6B2F 100%);
+            --accent-gradient: linear-gradient(135deg, #D4A529 0%, #B8860B 100%);
 
-            /* Dark Sections */
-            --dark-bg: #0f1729;
-            --dark-card: #1a2438;
-            --dark-text: #ffffff;
-            --dark-muted: #94a3b8;
-            --dark-glass: rgba(255, 255, 255, 0.03);
-            --dark-border: rgba(255, 255, 255, 0.1);
+            /* Dark Sections - Carbon Grey */
+            --dark-bg: #141414;
+            --dark-card: #1F1F1F;
+            --dark-text: #F5F5F5;
+            --dark-muted: #9E9E9E;
+            --dark-glass: rgba(255, 255, 255, 0.04);
+            --dark-border: rgba(125, 140, 69, 0.3);
 
-            /* Light Sections */
-            --light-bg: #f8f9fc;
-            --light-card: #ffffff;
-            --light-text: #0a1128;
-            --light-muted: #475569;
-            --light-glass: rgba(15, 23, 42, 0.04);
-            --light-border: rgba(15, 23, 42, 0.12);
+            /* Light Sections - Tactical Light */
+            --light-bg: #F0F0F0;
+            --light-card: #FFFFFF;
+            --light-text: #1A1A1A;
+            --light-muted: #616161;
+            --light-glass: rgba(20, 20, 20, 0.04);
+            --light-border: rgba(20, 20, 20, 0.15);
 
             /* Animation */
             --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
@@ -64,19 +67,19 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #f0b323 0%, #db9d14 100%);
+            background: linear-gradient(180deg, #7D8C45 0%, #5C6B2F 100%);
             border-radius: 6px;
             border: 3px solid var(--dark-card);
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, #db9d14 0%, #f0b323 100%);
+            background: linear-gradient(180deg, #5C6B2F 0%, #7D8C45 100%);
         }
 
         /* Para Firefox */
         * {
             scrollbar-width: thin;
-            scrollbar-color: #f0b323 var(--dark-card);
+            scrollbar-color: #7D8C45 var(--dark-card);
         }
 
         h1, h2, h3, h4, h5 {
@@ -100,6 +103,7 @@
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: none;
         }
 
         /* Navigation - Deep Navy Blue matching Hero */
@@ -111,8 +115,8 @@
             z-index: 100;
             padding: 1.2rem 0;
             backdrop-filter: blur(16px);
-            background: rgba(10, 22, 40, 0.95);
-            border-bottom: 1px solid rgba(240, 179, 35, 0.15);
+            background: rgba(20, 20, 20, 0.95);
+            border-bottom: 1px solid rgba(125, 140, 69, 0.2);
         }
 
         .nav-inner {
@@ -162,8 +166,8 @@
             border-radius: 8px;
             font-size: 0.9rem;
             font-weight: 600;
-            border: 1px solid rgba(240, 179, 35, 0.5);
-            background: rgba(240, 179, 35, 0.1);
+            border: 1px solid rgba(125, 140, 69, 0.5);
+            background: rgba(125, 140, 69, 0.1);
             color: var(--primary);
             transition: all 0.3s;
         }
@@ -181,19 +185,156 @@
             display: flex;
             align-items: center;
             padding-top: 80px;
+            padding-bottom: 120px;
             overflow: hidden;
-            background-color: #0a1628;
+            background-color: #141414;
             color: var(--dark-text);
+        }
+
+        /* Curva inferior del hero */
+        .hero-curve {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .hero-curve svg {
+            display: block;
+            width: 100%;
+            height: 150px;
         }
 
         .hero-bg {
             position: absolute;
             inset: 0;
-            z-index: -1;
+            z-index: 1;
             background:
-                radial-gradient(circle at 10% 20%, rgba(240, 179, 35, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 90% 80%, rgba(21, 40, 70, 0.6) 0%, transparent 50%),
-                linear-gradient(180deg, rgba(10, 22, 40, 0) 0%, rgba(10, 22, 40, 0.3) 100%);
+                radial-gradient(circle at 5% 30%, rgba(125, 140, 69, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(125, 140, 69, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 50% 90%, rgba(212, 165, 41, 0.08) 0%, transparent 40%),
+                linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, rgba(20, 20, 20, 0.5) 100%);
+            pointer-events: none;
+        }
+
+        /* Grid pattern overlay */
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            opacity: 0.03;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+        }
+
+        /* Diagonal accent shape */
+        .hero-shape {
+            position: absolute;
+            bottom: -5%;
+            right: -5%;
+            width: 50%;
+            height: 70%;
+            background: linear-gradient(135deg, rgba(125, 140, 69, 0.15) 0%, rgba(125, 140, 69, 0.05) 40%, transparent 70%);
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Floating geometric accents */
+        .hero-accent {
+            position: absolute;
+            border: 1px solid rgba(125, 140, 69, 0.3);
+            border-radius: 2px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-accent-1 {
+            top: 15%;
+            left: 5%;
+            width: 80px;
+            height: 80px;
+            transform: rotate(45deg);
+            border-color: rgba(125, 140, 69, 0.25);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero-accent-2 {
+            bottom: 20%;
+            left: 10%;
+            width: 40px;
+            height: 40px;
+            border-color: rgba(212, 165, 41, 0.25);
+            animation: float 6s ease-in-out infinite reverse;
+        }
+
+        .hero-accent-3 {
+            top: 30%;
+            right: 8%;
+            width: 60px;
+            height: 60px;
+            transform: rotate(15deg);
+            border-color: rgba(125, 140, 69, 0.3);
+            animation: float 10s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(45deg); opacity: 0.5; }
+            50% { transform: translateY(-20px) rotate(45deg); opacity: 1; }
+        }
+
+        /* Video de fondo del hero */
+        .hero-bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.25;
+            pointer-events: none;
+            overflow: hidden;
+            filter: blur(3px) saturate(0.7);
+        }
+
+        .hero-bg-video iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 177.77777778vh;
+            height: 56.25vw;
+            min-height: 100%;
+            min-width: 100%;
+            transform: translate(-50%, -50%) scale(1.1);
+            pointer-events: none;
+        }
+
+        /* Overlay dramático sobre el video */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(20, 20, 20, 0.7) 50%, rgba(20, 20, 20, 0.85) 100%);
+            pointer-events: none;
+        }
+
+        /* Línea de acento superior */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent-gradient);
+            z-index: 100;
         }
 
         .hero-grid {
@@ -201,16 +342,38 @@
             grid-template-columns: 1.1fr 0.9fr;
             gap: 5rem;
             align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            background: rgba(125, 140, 69, 0.15);
+            border: 1px solid rgba(125, 140, 69, 0.5);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s var(--ease-out) forwards 0.1s;
         }
 
         .hero-content h1 {
-            font-size: clamp(3rem, 5.5vw, 5.5rem);
+            font-size: clamp(3.2rem, 6vw, 6rem);
             margin-bottom: 1.5rem;
             opacity: 0;
             transform: translateY(30px);
             animation: fadeUp 1s var(--ease-out) forwards 0.2s;
-            letter-spacing: -1.5px;
+            letter-spacing: -2px;
             color: var(--dark-text);
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            font-weight: 800;
+            line-height: 1.05;
         }
 
         .hero-content p {
@@ -233,8 +396,8 @@
         }
 
         .btn-primary {
-            background: var(--gold-gradient);
-            color: #000; 
+            background: var(--accent-gradient);
+            color: #000;
             padding: 1.1rem 2.8rem;
             border-radius: 8px;
             font-weight: 700;
@@ -243,13 +406,13 @@
             align-items: center;
             gap: 0.5rem;
             border: none;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(240, 179, 35, 0.3);
+            box-shadow: 0 15px 30px rgba(212, 165, 41, 0.35);
         }
 
         .btn-outline {
@@ -274,43 +437,65 @@
         .video-container {
             position: relative;
             transform-style: preserve-3d;
-            perspective: 1200px;
+            perspective: 1500px;
             opacity: 0;
             animation: fadeIn 1.5s ease forwards 0.8s;
         }
 
         .video-wrapper {
             position: relative;
-            border-radius: 16px;
+            border-radius: 12px;
             overflow: hidden;
-            transform: rotateY(-12deg) rotateX(4deg);
-            transition: transform 0.4s var(--ease-out), box-shadow 0.4s ease;
-            box-shadow: -20px 20px 60px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(240, 179, 35, 0.2);
+            transform: rotateY(-5deg) rotateX(2deg);
+            transition: transform 0.5s var(--ease-out), box-shadow 0.5s ease;
+            box-shadow:
+                -10px 15px 40px rgba(0, 0, 0, 0.6),
+                0 0 0 2px rgba(125, 140, 69, 0.4),
+                0 0 30px rgba(125, 140, 69, 0.1),
+                inset 0 0 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(125, 140, 69, 0.15) 0%, transparent 40%);
+            z-index: 1;
+            pointer-events: none;
+            border-radius: 12px;
         }
 
         .video-wrapper:hover {
-            transform: rotateY(0deg) rotateX(0deg) scale(1.01);
-            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
-            border-color: rgba(240, 179, 35, 0.4);
-            z-index: 10;
+            transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.7),
+                0 0 0 1px rgba(125, 140, 69, 0.5),
+                0 0 40px rgba(125, 140, 69, 0.15);
         }
 
         .video-wrapper iframe {
             width: 100%;
             height: 100%;
             aspect-ratio: 16/9;
-            pointer-events: none;
+            display: block;
         }
 
 
         /* Stats Section - Dark for contrast */
         .stats {
             padding: 5rem 0;
-            background: var(--dark-card);
-            border-top: 1px solid var(--dark-border);
-            border-bottom: 1px solid var(--dark-border);
-            color: var(--dark-text);
+            background: var(--light-bg);
+            border-bottom: 1px solid var(--light-border);
+            color: var(--light-text);
+            position: relative;
+        }
+
+        .stats::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(125, 140, 69, 0.05) 50%, transparent 100%);
+            pointer-events: none;
         }
 
         .stats-grid {
@@ -334,7 +519,7 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-weight: 600;
-            color: var(--dark-muted);
+            color: var(--light-muted);
         }
 
         /* Section Padding */
@@ -353,6 +538,33 @@
         #servicios {
             background-color: var(--dark-bg);
             color: var(--dark-text);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #servicios::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(125, 140, 69, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(212, 165, 41, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        #servicios::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(125, 140, 69, 0.1);
+            border-radius: 50%;
+            pointer-events: none;
         }
         
         .section-header {
@@ -408,9 +620,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(240, 179, 35, 0.1);
+            background: rgba(125, 140, 69, 0.1);
             border-radius: 12px;
-            border: 1px solid rgba(240, 179, 35, 0.2);
+            border: 1px solid rgba(125, 140, 69, 0.2);
         }
 
         .service-icon svg {
@@ -420,7 +632,7 @@
         }
 
         .service-card:hover .service-icon {
-            background: rgba(240, 179, 35, 0.2);
+            background: rgba(125, 140, 69, 0.2);
             border-color: var(--primary);
             transform: scale(1.05);
             transition: all 0.3s var(--ease-out);
@@ -431,7 +643,7 @@
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 4px;
-            background: var(--gold-gradient);
+            background: var(--accent-gradient);
             transform: scaleX(0);
             transform-origin: left;
             transition: 0.4s var(--ease-out);
@@ -447,7 +659,10 @@
         /* Hover effects for dark cards */
         #servicios .service-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            box-shadow:
+                0 20px 40px rgba(0, 0, 0, 0.6),
+                0 0 30px rgba(125, 140, 69, 0.1);
+            border-color: rgba(125, 140, 69, 0.3);
         }
 
         .service-card:hover::before {
@@ -515,6 +730,18 @@
             opacity: 0.5;
             white-space: nowrap;
             color: var(--light-muted);
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .client-logo:hover {
+            opacity: 1;
+            color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .clients-marquee:hover .marquee-container {
+            animation-play-state: paused;
         }
 
         @keyframes marquee {
@@ -527,7 +754,31 @@
             padding: 10rem 0;
             text-align: center;
             background: var(--dark-bg);
-            background-image: radial-gradient(circle at 50% 50%, rgba(240, 179, 35, 0.1) 0%, transparent 70%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 50% 50%, rgba(212, 165, 41, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(125, 140, 69, 0.06) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .contact::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 400px;
+            border: 1px solid rgba(212, 165, 41, 0.1);
+            border-radius: 50%;
+            pointer-events: none;
         }
 
         .contact-box {
@@ -536,10 +787,15 @@
             border-radius: 30px;
             max-width: 900px;
             margin: 0 auto;
-            background: rgba(26, 36, 56, 0.85);
-            border: 1px solid var(--dark-border);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            background: rgba(31, 31, 31, 0.9);
+            border: 1px solid rgba(212, 165, 41, 0.2);
+            box-shadow:
+                0 20px 40px rgba(0, 0, 0, 0.5),
+                0 0 80px rgba(212, 165, 41, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
             color: var(--dark-text);
+            position: relative;
+            z-index: 1;
         }
 
         .contact-box h2 {
@@ -615,7 +871,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: center;
+            align-items: start;
             border-radius: 20px;
             padding: 2rem;
             border: 1px solid var(--dark-border);
@@ -626,12 +882,12 @@
         .map-visual {
             position: relative;
             width: 100%;
-            height: 700px;
+            height: 650px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: radial-gradient(circle at center, rgba(240, 179, 35, 0.05) 0%, transparent 70%);
-            overflow: hidden;
+            background: radial-gradient(circle at center, rgba(125, 140, 69, 0.08) 0%, transparent 70%);
+            overflow: hidden !important;
         }
 
         .san-juan-map {
@@ -641,35 +897,23 @@
             filter: drop-shadow(0 0 20px rgba(0,0,0,0.1));
             border-radius: 12px;
             overflow: hidden !important;
+            pointer-events: auto;
+        }
+
+        .san-juan-map object,
+        .san-juan-map svg {
+            overflow: hidden !important;
         }
 
         #mapa-interactivo {
             border: 1px solid var(--dark-border);
-            background: rgba(10, 22, 40, 0.5);
-            width: 100%;
-            height: 100%;
+            background: rgba(20, 20, 20, 0.5);
+            width: 100% !important;
+            height: 100% !important;
             overflow: hidden !important;
         }
 
 
-        .map-interface::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        .map-interface::-webkit-scrollbar-track {
-            background: rgba(26, 36, 56, 0.3);
-            border-radius: 10px;
-        }
-
-        .map-interface::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #f0b323 0%, #db9d14 100%);
-            border-radius: 10px;
-            border: 2px solid rgba(26, 36, 56, 0.3);
-        }
-
-        .map-interface::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, #db9d14 0%, #f0b323 100%);
-        }
 
         .map-node {
             cursor: pointer;
@@ -690,34 +934,15 @@
             border: 1px solid var(--primary);
             border-radius: 8px;
             pointer-events: none;
-            background: rgba(10, 15, 30, 0.95);
+            background: rgba(20, 20, 20, 0.95);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             color: var(--dark-text);
         }
 
         .map-list {
-            max-height: 700px;
-            overflow-y: auto;
-            padding-right: 10px;
-        }
-
-        /* Custom Scrollbar for Map List */
-        .map-list::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .map-list::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 3px;
-        }
-
-        .map-list::-webkit-scrollbar-thumb {
-            background: var(--primary);
-            border-radius: 3px;
-        }
-
-        .map-list::-webkit-scrollbar-thumb:hover {
-            background: #d49a1f;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
         .map-list .loc-item {
@@ -735,7 +960,7 @@
 
         .map-list .loc-item.active {
             border-color: var(--primary);
-            background: linear-gradient(90deg, rgba(240, 179, 35, 0.1) 0%, transparent 100%);
+            background: linear-gradient(90deg, rgba(125, 140, 69, 0.1) 0%, transparent 100%);
         }
 
         .loc-header {
@@ -850,7 +1075,7 @@
         }
 
         .news-category {
-            background: rgba(240, 179, 35, 0.1);
+            background: rgba(125, 140, 69, 0.1);
             color: var(--primary);
             padding: 0.3rem 0.8rem;
             border-radius: 4px;
@@ -907,7 +1132,7 @@
             .contact-box h2 { font-size: 2.5rem; }
 
             .map-interface { grid-template-columns: 1fr; gap: 2rem; }
-            .map-visual { height: 350px; }
+            .map-visual { height: 450px; overflow: hidden !important; }
 
             .news-grid { grid-template-columns: 1fr; gap: 2rem; }
         }
@@ -918,7 +1143,7 @@
     <nav class="navbar">
         <div class="container nav-inner">
             <a href="#" class="logo">
-                <span style="color: var(--primary);">//</span> GEDEÓN R.G.
+                <span style="color: var(--primary);">//</span> Guardian Patagonico
             </a>
             <div class="nav-links">
                 <a href="#servicios">Servicios</a>
@@ -935,10 +1160,20 @@
     <!-- Hero -->
     <header class="hero">
         <div class="hero-bg"></div>
+        <div class="hero-pattern"></div>
+        <div class="hero-shape"></div>
+        <div class="hero-accent hero-accent-1"></div>
+        <div class="hero-accent hero-accent-2"></div>
+        <div class="hero-accent hero-accent-3"></div>
+        <!-- Video de fondo con opacidad casi imperceptible -->
+        <div class="hero-bg-video">
+            <iframe src="https://www.youtube.com/embed/ApLnqFUtHWc?autoplay=1&mute=1&loop=1&playlist=ApLnqFUtHWc&controls=0&showinfo=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="container hero-grid">
             <div class="hero-content">
-                <h1>Seguridad que <br> <span class="text-gradient">Transforma</span></h1>
-                <p>Nuestra misión es que usted se concentre en producir, mientras nosotros cuidamos su seguridad.</p>
+                <span class="hero-badge">Seguridad Privada en la Patagonia</span>
+                <h1>Protección<br><span class="text-gradient">Sin Compromiso</span></h1>
+                <p>Usted se concentra en producir. Nosotros nos encargamos de proteger lo que más importa.</p>
                 <div class="cta-group">
                     <a href="#contacto" class="btn-primary">Solicitar Diagnóstico</a>
                     <a href="#servicios" class="btn-outline">Ver Servicios</a>
@@ -947,9 +1182,26 @@
             <div class="video-container">
                 <div class="video-wrapper">
                     <!-- YouTube Embed clean -->
-                    <iframe width="1895" height="734" src="https://www.youtube.com/embed/sahwo4JdVzs" title="Cómo se fabrica el motor de caza más potente del mundo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="1013" height="570" src="https://www.youtube.com/embed/ApLnqFUtHWc?autoplay=1&mute=1&loop=1&playlist=ApLnqFUtHWc" title="Company Profile Video - Ultimate Security Services | Creative Company Profile Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
+        </div>
+
+        <!-- Curva inferior -->
+        <div class="hero-curve">
+            <svg viewBox="0 0 1440 150" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="fadeLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#141414" stop-opacity="0"/>
+                        <stop offset="50%" stop-color="#141414" stop-opacity="1"/>
+                        <stop offset="100%" stop-color="#141414" stop-opacity="1"/>
+                    </linearGradient>
+                </defs>
+                <!-- Relleno blanco principal -->
+                <path d="M0 20C600 100 1200 80 1440 80V150H0V20Z" fill="#F0F0F0"/>
+                <!-- Línea oscura (pelo) con desvanecimiento hacia la izquierda -->
+                <path d="M0 45C600 125 1200 105 1440 105" stroke="url(#fadeLineGradient)" stroke-width="6" fill="none"/>
+            </svg>
         </div>
     </header>
 
@@ -968,48 +1220,16 @@
     </section>
 
     <!-- Quiénes Somos -->
-    <section id="experiencia" class="section-padding" style="padding-bottom: 2rem;">
+    <section id="experiencia" class="section-padding">
         <div class="container">
-            <div class="section-header reveal-on-scroll">
+            <div class="section-header reveal-on-scroll" style="text-align: center; max-width: 800px; margin: 0 auto;">
                 <span class="section-label">Quiénes Somos</span>
                 <h2>Compromiso y Responsabilidad</h2>
                 <br>
-                <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; max-width: 900px; margin: 0 auto;">
-                    En Gedeón R.G. somos una empresa de seguridad privada con presencia en San Juan Capital, Rodeo (Iglesia), Jáchal, Calingasta, 25 de Mayo y Valle Fértil, ampliando permanentemente nuestro radio de acción en toda la provincia.<br><br>
-                    Somos una empresa responsable, comprometida con la protección integral y con un equipo preparado y capacitado con título habilitante para responder a las más altas exigencias de seguridad.
+                <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">
+                    En Guardian Patagonico somos una empresa de seguridad privada con presencia en San Juan Capital, Rodeo (Iglesia), Jáchal, Calingasta, 25 de Mayo y Valle Fértil, ampliando permanentemente nuestro radio de acción en toda la provincia.<br><br>
+                    Somos una empresa seria y responsable, comprometida con la protección integral de personas, bienes e instalaciones. Contamos con un equipo preparado y capacitado con título habilitante, brindando disponibilidad 24/7 para responder a las más altas exigencias de seguridad.
                 </p>
-            </div>
-
-            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <div class="service-card reveal-on-scroll">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                    </div>
-                    <h3>Confianza y Respaldo</h3>
-                    <p>Empresa seria y responsable con personal altamente capacitado y título habilitante.</p>
-                </div>
-                <div class="service-card reveal-on-scroll" style="transition-delay: 0.1s">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Disponibilidad 24/7</h3>
-                    <p>Presencia permanente y respuesta inmediata ante cualquier incidente o emergencia.</p>
-                </div>
-                <div class="service-card reveal-on-scroll" style="transition-delay: 0.2s">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                    </div>
-                    <h3>Cobertura Provincial</h3>
-                    <p>Presencia estratégica en 6 localidades de San Juan con expansión continua.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -1019,9 +1239,9 @@
         <div class="container">
             <div class="section-header reveal-on-scroll">
                 <span class="section-label">Nuestros Servicios</span>
-                <h2>Personal Altamente Capacitado</h2>
+                <h2>Soluciones Integrales de Seguridad</h2>
                 <p style="color: var(--text-muted); margin-top: 1rem; max-width: 900px; margin-left: auto; margin-right: auto;">
-                    Los empleados de GEDEÓN cuentan con empleados y personal con título habilitante para responder a las más altas exigencias de la seguridad adaptadas a empresas, industrias, comercios y proyectos mineros.
+                    Personal con título habilitante y alta capacitación para responder a las exigencias de seguridad en empresas, industrias, comercios y proyectos mineros.
                 </p>
             </div>
             <div class="services-grid">
@@ -1092,38 +1312,43 @@
         </div>
     </section>
 
-    <!-- Beneficios (New Section) -->
-    <section id="clientes" class="section-padding" style="background: var(--bg-card); border-top: 1px solid var(--glass-border);">
+    <!-- Nuestros Clientes -->
+    <section id="clientes" class="section-padding" style="background: var(--light-card); border-top: 1px solid var(--light-border); overflow: hidden;">
         <div class="container">
-            <div class="section-header reveal-on-scroll">
-                <span class="section-label">Beneficios</span>
-                <h2>Con GEDEÓN R.G. usted obtiene:</h2>
+            <div class="section-header reveal-on-scroll" style="text-align: center; max-width: 800px; margin: 0 auto 4rem;">
+                <span class="section-label">Nuestros Clientes</span>
+                <h2>Confianza que nos respalda</h2>
                 <p style="color: var(--text-muted); margin-top: 1rem;">
-                    Nuestro compromiso es proteger personas, bienes, industrias, empresas privadas y públicas (escuelas, hospitales, comercios, campamentos mineros e instituciones estratégicas).
+                    Protegemos personas, bienes e instalaciones de empresas privadas y públicas: industrias mineras, comercios, escuelas, hospitales, campamentos e instituciones estratégicas en toda la provincia.
                 </p>
             </div>
-            <div class="services-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
-                <div class="service-card reveal-on-scroll">
-                   <h3>Confianza y Confianza</h3>
-                   <p>Confianza y respaldo de una empresa seria y responsable.</p>
+
+            <!-- Carrusel de Clientes -->
+            <div class="clients-marquee" style="overflow: hidden; position: relative;">
+                <div class="marquee-container">
+                    <div class="client-logo">Barrick Gold</div>
+                    <div class="client-logo">Veladero</div>
+                    <div class="client-logo">Glencore</div>
+                    <div class="client-logo">Gobierno de San Juan</div>
+                    <div class="client-logo">Hospital Rawson</div>
+                    <div class="client-logo">Universidad Nacional</div>
+                    <div class="client-logo">Banco San Juan</div>
+                    <div class="client-logo">Minera Los Pelambres</div>
+                    <div class="client-logo">Josemaría Resources</div>
+                    <div class="client-logo">Minera Casposo</div>
+                    <!-- Duplicado para loop infinito -->
+                    <div class="client-logo">Barrick Gold</div>
+                    <div class="client-logo">Veladero</div>
+                    <div class="client-logo">Glencore</div>
+                    <div class="client-logo">Gobierno de San Juan</div>
+                    <div class="client-logo">Hospital Rawson</div>
+                    <div class="client-logo">Universidad Nacional</div>
+                    <div class="client-logo">Banco San Juan</div>
+                    <div class="client-logo">Minera Los Pelambres</div>
+                    <div class="client-logo">Josemaría Resources</div>
+                    <div class="client-logo">Minera Casposo</div>
                 </div>
-                <div class="service-card reveal-on-scroll">
-                   <h3>Continuidad</h3>
-                   <p>Continuidad operativa gracias a protocolos de seguridad eficientes.</p>
-                </div>
-                <div class="service-card reveal-on-scroll">
-                   <h3>Inmediatez</h3>
-                   <p>Respuesta inmediata ante incidentes.</p>
-                </div>
-                <div class="service-card reveal-on-scroll">
-                   <h3>Presencia</h3>
-                   <p>Presencia local en San Juan Capital, Rodeo, Jáchal, Calingasta y Valle Fértil.</p>
-                </div>
-                <!-- <div class="service-card reveal-on-scroll">
-                   <h3>A Medida</h3>
-                   <p>Servicio a medida, adaptado a la magnitud de cada empresa o industria.</p>
-                </div>
-            </div> -->
+            </div>
         </div>
     </section>
 
@@ -1132,60 +1357,57 @@
         <div class="hero-bg" style="opacity: 0.3;"></div>
         <div class="container">
             <div class="section-header reveal-on-scroll">
-                <span class="section-label">Cobertura Provincial</span>
-                <h2>Despliegue Operativo</h2>
+                <span class="section-label">Cobertura Patagónica</span>
+                <h2>Despliegue Operativo en la Región</h2>
                 <p style="color: var(--text-muted); margin-top: 1rem;">
-                    Nuestra red de seguridad cubre puntos estratégicos en toda la provincia, asegurando respuesta rápida y coordinación centralizada.
+                    Nuestra red de seguridad cubre puntos estratégicos en toda la región patagónica, asegurando respuesta rápida y coordinación centralizada.
                 </p>
             </div>
 
-            <div class="map-interface reveal-on-scroll">
-                <div class="map-visual">
-                    <!-- Mapa Interactivo Real de San Juan -->
-                    <object data="/map/mapa.html" type="image/svg+xml" id="mapa-interactivo" class="san-juan-map" style="width: 100%; height: 100%;"></object>
-
-                    <!-- Tooltip Container (updated via JS) -->
-                    <div class="map-tooltip" style="opacity: 0; transform: translateY(10px); transition: all 0.3s;">
-                        <h4>San Juan Capital</h4>
-                        <p>Base Central & Monitoreo 24/7</p>
+            <div class="map-interface reveal-on-scroll" style="display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr); gap: 3rem; align-items: stretch;">
+                <div class="map-visual" style="background: radial-gradient(circle at top left, rgba(0,27,58,0.18), transparent 55%), rgba(4,9,27,0.95); border-radius: 1.5rem; padding: 2.5rem; color: #fff; display: flex; flex-direction: column; justify-content: space-between; min-height: 320px;">
+                    <div>
+                        <p style="text-transform: uppercase; letter-spacing: .16em; font-size: .8rem; opacity: .8; margin-bottom: .75rem;">Cobertura actual</p>
+                        <h3 style="font-size: 1.9rem; margin-bottom: 1rem;">Operación Focalizada en Chubut</h3>
+                        <p style="max-width: 32rem; font-size: .98rem; line-height: 1.7; opacity: .9;">
+                            Coordinamos servicios de seguridad privada en los principales polos urbanos, corredores logísticos
+                            y zonas industriales de la provincia, con monitoreo permanente y respuesta rápida.
+                        </p>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                        <div style="border-radius: 1rem; background: rgba(255,255,255,0.04); padding: 1.25rem 1.1rem;">
+                            <div style="font-size: .8rem; text-transform: uppercase; letter-spacing: .14em; opacity: .75; margin-bottom: .5rem;">Bases</div>
+                            <div style="font-size: 1.4rem; font-weight: 600;">3</div>
+                            <p style="font-size: .86rem; opacity: .8; margin-top: .35rem;">Puntos operativos en el valle y la costa.</p>
+                        </div>
+                        <div style="border-radius: 1rem; background: rgba(255,255,255,0.04); padding: 1.25rem 1.1rem;">
+                            <div style="font-size: .8rem; text-transform: uppercase; letter-spacing: .14em; opacity: .75; margin-bottom: .5rem;">Cobertura</div>
+                            <div style="font-size: 1.4rem; font-weight: 600;">24/7</div>
+                            <p style="font-size: .86rem; opacity: .8; margin-top: .35rem;">Monitoreo y coordinación centralizada.</p>
+                        </div>
+                        <div style="border-radius: 1rem; background: rgba(255,255,255,0.04); padding: 1.25rem 1.1rem;">
+                            <div style="font-size: .8rem; text-transform: uppercase; letter-spacing: .14em; opacity: .75; margin-bottom: .5rem;">Sectores</div>
+                            <div style="font-size: 1.4rem; font-weight: 600;">Estrategicos</div>
+                            <p style="font-size: .86rem; opacity: .8; margin-top: .35rem;">Industrial, energético, logístico y comercial.</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="map-list">
-                    <div class="loc-item active" data-target="San Juan Capital">
-                        <div class="loc-header">
-                            <span class="loc-bulelt">01</span>
-                            <h3>San Juan Capital</h3>
+                <div class="map-list" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="loc-item active" style="border-radius: 1.3rem; padding: 1.8rem 1.6rem; background: var(--card-bg); box-shadow: 0 18px 45px rgba(15,23,42,0.28); border: 1px solid rgba(148,163,184,0.3);">
+                        <div class="loc-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: .75rem;">
+                            <span class="loc-bulelt" style="display: inline-flex; align-items: center; justify-content: center; width: 2.2rem; height: 2.2rem; border-radius: 999px; background: rgba(15,118,110,0.12); color: var(--primary); font-weight: 600; font-size: .9rem;">01</span>
+                            <h3 style="font-size: 1.15rem;">Cobertura en Chubut</h3>
                         </div>
-                        <p>Centro de Operaciones y Monitoreo. Coordinación general de flota y personal.</p>
-                    </div>
-                    <div class="loc-item" data-target="Rodeo (Iglesia)">
-                        <div class="loc-header">
-                            <span class="loc-bulelt">02</span>
-                            <h3>Rodeo (Iglesia)</h3>
-                        </div>
-                        <p>Base estratégica para proyectos mineros y de alta montaña.</p>
-                    </div>
-                    <div class="loc-item" data-target="Jáchal">
-                        <div class="loc-header">
-                            <span class="loc-bulelt">03</span>
-                            <h3>Jáchal</h3>
-                        </div>
-                        <p>Cobertura logística y custodial para el norte de la provincia.</p>
-                    </div>
-                    <div class="loc-item" data-target="Valle Fértil">
-                        <div class="loc-header">
-                            <span class="loc-bulelt">04</span>
-                            <h3>Valle Fértil</h3>
-                        </div>
-                        <p>Control de accesos y seguridad turística/ambiental.</p>
-                    </div>
-                    <div class="loc-item" data-target="Calingasta">
-                        <div class="loc-header">
-                            <span class="loc-bulelt">05</span>
-                            <h3>Calingasta</h3>
-                        </div>
-                        <p>Seguridad patrimonial e industrial en zona cordillerana.</p>
+                        <p style="font-size: .94rem; color: var(--text-muted); margin-bottom: 1.1rem;">
+                            Diseño de esquemas de seguridad a medida para empresas, industrias y proyectos
+                            estratégicos en toda la provincia.
+                        </p>
+                        <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: .55rem; font-size: .9rem; color: var(--text-main);">
+                            <li>• Guardias fijos y móviles coordinados por centro de monitoreo.</li>
+                            <li>• Custodias de cargas y acompañamiento de flotas.</li>
+                            <li>• Cobertura en parques industriales y predios logísticos.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -1327,7 +1549,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>GEDEÓN R.G.</h4>
+                    <h4>Guardian Patagonico</h4>
                     <p>Seguridad Privada de Alto Nivel en la provincia de San Juan.</p>
                 </div>
                 <div class="footer-col">
@@ -1349,7 +1571,7 @@
                 </div>
                 <div class="footer-col">
                     <h4>Legales</h4>
-                    <p>© <?= date('Y') ?> Gedeón R.G.<br>Todos los derechos reservados.</p>
+                    <p>© <?= date('Y') ?> Guardian Patagonico<br>Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>
@@ -1371,150 +1593,13 @@
             document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
             
             // Map Logic - Integración con Mapa Real
-            const mapaObject = document.getElementById('mapa-interactivo');
-            const listItems = document.querySelectorAll('.loc-item');
-            const tooltip = document.querySelector('.map-tooltip');
-
-            // Tooltip Elements
-            let tooltipTitle = null;
-            let tooltipText = null;
-            if(tooltip) {
-                tooltipTitle = tooltip.querySelector('h4');
-                tooltipText = tooltip.querySelector('p');
-            }
-
-            // Mapeo de nombres de ubicaciones a paths del SVG
-            const locationToPath = {
-                'San Juan Capital': 31, // Santa Lucia (capital)
-                'Rodeo (Iglesia)': 25,  // Iglesia
-                'Jáchal': 26,           // jachal
-                'Valle Fértil': 34,     // Valle Fértil
-                'Calingasta': 21        // Calingasta
-            };
-
-            // Esperar a que el SVG cargue
-            mapaObject.addEventListener('load', function() {
-                const svgDoc = this.contentDocument;
-                const paths = svgDoc.querySelectorAll('path');
-                const svg = svgDoc.querySelector('svg');
-
-                // Deshabilitar todos los paths por defecto
-                paths.forEach((path, index) => {
-                    const pathNumber = index + 1;
-                    const isActive = Object.values(locationToPath).includes(pathNumber);
-
-                    if (!isActive) {
-                        // Deshabilitar paths no activos
-                        path.style.cursor = 'default';
-                        path.style.pointerEvents = 'none';
-                        path.style.opacity = '0.3';
-                    } else {
-                        // Configurar paths activos
-                        path.style.cursor = 'pointer';
-
-                        // Obtener nombre de la ubicación
-                        const locationName = Object.keys(locationToPath).find(key => locationToPath[key] === pathNumber);
-
-                        // Obtener el centro del path (bounding box)
-                        const bbox = path.getBBox();
-                        const centerX = bbox.x + bbox.width / 2;
-                        const centerY = bbox.y + bbox.height / 2;
-
-                        // Crear círculo parpadeante
-                        const pulseCircle = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'circle');
-                        pulseCircle.setAttribute('cx', centerX);
-                        pulseCircle.setAttribute('cy', centerY);
-                        pulseCircle.setAttribute('r', '8');
-                        pulseCircle.setAttribute('fill', '#f0b323');
-                        pulseCircle.setAttribute('opacity', '0.8');
-                        pulseCircle.style.pointerEvents = 'none';
-
-                        // Animación de pulso
-                        const animate = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'animate');
-                        animate.setAttribute('attributeName', 'r');
-                        animate.setAttribute('values', '4;12;4');
-                        animate.setAttribute('dur', '2s');
-                        animate.setAttribute('repeatCount', 'indefinite');
-                        pulseCircle.appendChild(animate);
-
-                        const animateOpacity = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'animate');
-                        animateOpacity.setAttribute('attributeName', 'opacity');
-                        animateOpacity.setAttribute('values', '0.8;0.2;0.8');
-                        animateOpacity.setAttribute('dur', '2s');
-                        animateOpacity.setAttribute('repeatCount', 'indefinite');
-                        pulseCircle.appendChild(animateOpacity);
-
-                        svg.appendChild(pulseCircle);
-
-                        // Círculo central fijo
-                        const centerCircle = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'circle');
-                        centerCircle.setAttribute('cx', centerX);
-                        centerCircle.setAttribute('cy', centerY);
-                        centerCircle.setAttribute('r', '4');
-                        centerCircle.setAttribute('fill', '#f0b323');
-                        centerCircle.style.pointerEvents = 'none';
-                        svg.appendChild(centerCircle);
-
-                        // Evento hover en el mapa
-                        path.addEventListener('mouseenter', function() {
-                            if (tooltip && tooltipTitle) {
-                                tooltipTitle.innerText = locationName;
-                                tooltip.style.opacity = '1';
-                                tooltip.style.transform = 'translateY(0)';
-                            }
-                            activateLocation(locationName);
-                        });
-
-                        path.addEventListener('mouseleave', function() {
-                            if (tooltip) {
-                                tooltip.style.opacity = '0';
-                                tooltip.style.transform = 'translateY(10px)';
-                            }
-                        });
-
-                        // Evento click
-                        path.addEventListener('click', function() {
-                            activateLocation(locationName);
-                        });
-                    }
-                });
-            });
-
-            // Sync visual list with hover
-            function activateLocation(locName) {
-                listItems.forEach(item => {
-                    if(item.dataset.target === locName) item.classList.add('active');
-                    else item.classList.remove('active');
-                });
-            }
-
-            listItems.forEach(item => {
-                item.addEventListener('mouseenter', () => {
-                    activateLocation(item.dataset.target);
-
-                    // Actualizar tooltip
-                    if (tooltip && tooltipTitle) {
-                        tooltipTitle.innerText = item.dataset.target;
-                        tooltip.style.opacity = '1';
-                        tooltip.style.transform = 'translateY(0)';
-                    }
-                });
-
-                item.addEventListener('mouseleave', () => {
-                    if (tooltip) {
-                        tooltip.style.opacity = '0';
-                        tooltip.style.transform = 'translateY(10px)';
-                    }
-                });
-            });
-            
-             // Simple Parallax for Hero Video
+             // Subtle Parallax for Hero Video
             document.addEventListener('mousemove', (e) => {
                 const video = document.querySelector('.video-wrapper');
                 if(video && window.innerWidth > 900) {
-                    const x = (window.innerWidth - e.pageX * 2) / 100;
-                    const y = (window.innerHeight - e.pageY * 2) / 100;
-                    video.style.transform = `rotateY(${-15 + x}deg) rotateX(${5 + y}deg)`;
+                    const x = (window.innerWidth - e.pageX * 2) / 200;
+                    const y = (window.innerHeight - e.pageY * 2) / 200;
+                    video.style.transform = `rotateY(${-5 + x}deg) rotateX(${2 + y}deg)`;
                 }
             });
         });
