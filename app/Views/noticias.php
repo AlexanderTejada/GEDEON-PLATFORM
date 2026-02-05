@@ -1,111 +1,60 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias | Guardian Patagonia</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+<?= $this->extend('layouts/main') ?>
 
-    <style>
-        :root {
-            --primary: #7D8C45;
-            --dark-bg: #141414;
-            --light-bg: #F5F6F7;
-            --light-border: rgba(0, 0, 0, 0.08);
-            --text-muted: #666;
-        }
+<?= $this->section('title') ?>Noticias<?= $this->endSection() ?>
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: var(--light-bg); font-family: 'Plus Jakarta Sans', sans-serif; color: #1A1A1A; }
-        a { text-decoration: none; transition: 0.3s; }
-        .container { width: min(1100px, 92%); margin: 0 auto; }
-
-        /* Navbar */
-        .navbar {
-            position: fixed; top: 0; width: 100%; z-index: 100; padding: 1.2rem 0;
-            background: #141414; border-bottom: 1px solid rgba(125, 140, 69, 0.2);
-        }
-        .nav-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Outfit'; font-weight: 800; color: #fff; font-size: 1.4rem; letter-spacing: -0.5px; }
-        .nav-links a { font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.7); margin-left: 2rem; }
-        .nav-links a:hover { color: var(--primary); }
-
-        /* Page Header */
-        .page-header { background: #fff; padding: 160px 0 60px; border-bottom: 1px solid var(--light-border); }
-        .page-header h1 { font-family: 'Outfit'; font-size: 3rem; margin-bottom: 0.5rem; letter-spacing: -1px; }
-
-        /* Main Content Area */
-        .news-section { padding: 80px 0; min-height: 60vh; }
-        
-        /* Empty State (Sin hardcodeo de noticias) */
-        .status-box {
-            background: #fff; border: 1px solid var(--light-border);
-            border-radius: 32px; padding: 100px 40px; text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-        }
-        .status-box svg { color: var(--primary); margin-bottom: 24px; opacity: 0.3; }
-        .status-box h3 { font-family: 'Outfit'; font-size: 2rem; margin-bottom: 16px; color: #1a1a1a; }
-        .status-box p { color: var(--text-muted); max-width: 480px; margin: 0 auto 32px; line-height: 1.8; font-size: 1.1rem; }
-        
-        .btn-back {
-            display: inline-block; padding: 12px 32px; border-radius: 12px;
-            background: var(--primary); color: #fff; font-weight: 700; font-size: 0.95rem;
-        }
-        .btn-back:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(125, 140, 69, 0.3); }
-
-        /* Footer */
-        footer { background: #141414; color: #666; padding: 40px 0; text-align: center; font-size: 0.9rem; }
-
-        @media (max-width: 768px) {
-            .page-header { padding: 120px 0 40px; text-align: center; }
-            .page-header h1 { font-size: 2.2rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <nav class="navbar">
-        <div class="container nav-inner">
-            <a href="http://localhost:8080/" class="logo">GUARDIAN PATAGONIA</a>
-            <div class="nav-links">
-                <a href="http://localhost:8080/">Inicio</a>
-                <a href="http://localhost:8080/#servicios">Servicios</a>
-                <a href="http://localhost:8080/#contacto">Contacto</a>
-            </div>
-        </div>
-    </nav>
-
-    <header class="page-header">
+<?= $this->section('content') ?>
+    <header class="page-header" style="background: var(--light-card); padding: 160px 0 60px; border-bottom: 1px solid var(--light-border);">
         <div class="container">
-            <h1>Noticias</h1>
-            <p style="color: var(--text-muted);">Actualidad operativa y comunicados oficiales de la región.</p>
+            <span class="section-label">Actualidad</span>
+            <h1 style="font-size: 3.5rem; margin-bottom: 0.5rem;">Noticias</h1>
+            <p style="color: var(--light-muted); font-size: 1.1rem;">Actualidad operativa y comunicados oficiales de la región.</p>
         </div>
     </header>
 
-    <section class="news-section">
+    <section class="news-section section-padding">
         <div class="container">
-            <div class="status-box">
-                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                </svg>
-                
-                <h3>Portal en Noticias</h3>
-                <p>Pronto podrás informarte con las últimas noticias sobre seguridad acá.</p>
-                
-                <a href="http://localhost:8080/" class="btn-back">Volver al Inicio</a>
-            </div>
+            <?php if (!empty($noticias) && is_array($noticias)): ?>
+                <div class="news-grid">
+                    <?php foreach ($noticias as $noticia): ?>
+                        <article class="news-card reveal-on-scroll">
+                            <div class="news-image">
+                                <img src="<?= $noticia['imagen'] ?? 'https://picsum.photos/seed/news/600/400' ?>" alt="<?= esc($noticia['titulo']) ?>">
+                            </div>
+                            <div class="news-content">
+                                <div class="news-meta">
+                                    <span class="news-date"><?= esc($noticia['fecha'] ?? 'Reciente') ?></span>
+                                    <span class="news-category"><?= esc($noticia['categoria'] ?? 'General') ?></span>
+                                </div>
+                                <h3><?= esc($noticia['titulo']) ?></h3>
+                                <p class="news-excerpt" style="color: var(--light-muted);">
+                                    <?= esc($noticia['resumen']) ?>
+                                </p>
+                                <a href="<?= base_url('noticias/' . $noticia['slug']) ?>" class="news-link">
+                                    Leer más 
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+                    <?php endforeach; ?>
+                </div>
+            <?php else: ?>
+                <div class="status-box" style="background: var(--light-card); border: 1px solid var(--light-border); border-radius: 32px; padding: 100px 40px; text-align: center;">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary); margin-bottom: 24px; opacity: 0.3;">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                    
+                    <h3>Portal de Noticias en Construcción</h3>
+                    <p style="color: var(--light-muted); max-width: 480px; margin: 0 auto 32px; line-height: 1.8; font-size: 1.1rem;">
+                        Aún no hay noticias publicadas. Pronto estaremos compartiendo las últimas novedades sobre seguridad y operaciones en la región.
+                    </p>
+                    
+                    <a href="<?= base_url('/') ?>" class="btn-primary">Volver al Inicio</a>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2026 Guardian Patagonia. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-</body>
-</html>|
+<?= $this->endSection() ?>

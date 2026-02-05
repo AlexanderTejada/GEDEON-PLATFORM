@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $this->renderSection('title') ?> | Guardian Patagonico</title>
-    <meta name="description" content="Seguridad Privada Corporativa en Chubut. Protección de activos críticos con tecnología y personal de élite.">
+    <meta name="description" content="Seguridad Privada Corporativa en la Patagonia. Protección de activos críticos con tecnología y personal de élite.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

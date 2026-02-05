@@ -75,7 +75,7 @@ Seguridad Privada de Alto Nivel
                 <h2>Compromiso y Responsabilidad</h2>
                 <br>
                 <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">
-                    En Guardian Patagonico somos una empresa de seguridad privada con presencia en Chubut Comodoro Rivadavia.<br><br>
+                    En Guardian Patagonico somos una empresa de seguridad privada con presencia en la Patagonia, Comodoro Rivadavia.<br><br>
                     Somos una empresa seria y responsable, comprometida con la protección integral de personas, bienes e instalaciones. Contamos con un equipo preparado y capacitado con título habilitante, brindando disponibilidad 24/7 para responder a las más altas exigencias de seguridad.
                 </p>
             </div>
@@ -169,7 +169,7 @@ Seguridad Privada de Alto Nivel
         <div class="reveal-on-scroll" style="max-width: 900px; margin: 0 auto; text-align: center;">
             
             <span class="section-label">Despliegue Territorial</span>
-            <h2 class="text-gradient" style="font-size: clamp(2.5rem, 4vw, 3.8rem); margin-bottom: 2rem;">Operatividad Total en Chubut</h2>
+            <h2 class="text-gradient" style="font-size: clamp(2.5rem, 4vw, 3.8rem); margin-bottom: 2rem;">Operatividad Total en la Patagonia</h2>
             
             <p style="color: var(--dark-muted); font-size: 1.2rem; line-height: 1.8; margin-bottom: 4rem;">
                 Nuestra estructura está diseñada para la movilidad táctica. Operamos directamente en los objetivos de nuestros clientes, con unidades desplegadas estratégicamente en Comodoro Rivadavia y alrededores para garantizar tiempos de respuesta inmediatos.
@@ -215,43 +215,39 @@ Seguridad Privada de Alto Nivel
         </div>
 
         <div class="news-grid">
-            <article class="news-card reveal-on-scroll">
-                <div class="news-image">
-                    <img src="https://picsum.photos/seed/patagonia-sec/600/400" alt="Operaciones Patagonia">
+            <?php if (!empty($noticias)): ?>
+                <?php foreach ($noticias as $noticia): ?>
+                    <article class="news-card reveal-on-scroll">
+                        <div class="news-image">
+                            <img src="<?= $noticia['imagen'] ?>" alt="<?= esc($noticia['titulo']) ?>">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-date"><?= esc($noticia['fecha']) ?></span>
+                                <span class="news-category"><?= esc($noticia['categoria']) ?></span>
+                            </div>
+                            <h3><?= esc($noticia['titulo']) ?></h3>
+                            <p class="news-excerpt" style="color: var(--light-muted);">
+                                <?= esc($noticia['resumen']) ?>
+                            </p>
+                        </div>
+                    </article>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="reveal-on-scroll" style="grid-column: 1 / -1; background: rgba(125, 140, 69, 0.05); border: 2px dashed var(--light-border); border-radius: 16px; padding: 4rem 2rem; text-align: center;">
+                    <h3 style="font-size: 1.5rem; color: var(--light-text); margin-bottom: 1rem;">Novedades Próximamente</h3>
+                    <p style="font-size: 1rem; color: var(--light-muted); max-width: 500px; margin: 0 auto 2rem;">Estamos preparando nuestro portal de noticias para mantenerlo informado sobre nuestras operaciones y avances tecnológicos.</p>
+                    <a href="<?= base_url('noticias') ?>" class="btn-primary">Ver Portal de Noticias</a>
                 </div>
-                <div class="news-content">
-                    <div class="news-meta">
-                        <span class="news-date">Reciente</span>
-                        <span class="news-category">Operativo</span>
-                    </div>
-                    <h3>Expansión de servicios en el Golfo San Jorge</h3>
-                    <p class="news-excerpt" style="color: var(--light-muted);">
-                        Consolidamos nuestra presencia en la cuenca, optimizando los tiempos de respuesta para servicios de custodia de caudales e insumos críticos.
-                    </p>
-                </div>
-            </article>
+            <?php endif; ?>
 
-            <article class="news-card reveal-on-scroll" style="transition-delay: 0.1s">
-                <div class="news-image">
-                    <img src="https://picsum.photos/seed/tech-guard/600/400" alt="Tecnología LPR">
-                </div>
-                <div class="news-content">
-                    <div class="news-meta">
-                        <span class="news-date">Actualizado</span>
-                        <span class="news-category">Tecnología</span>
-                    </div>
-                    <h3>Integración de sistemas LPR y Control de Accesos</h3>
-                    <p class="news-excerpt" style="color: var(--light-muted);">
-                        Implementamos nuevas paletas electrónicas y detectores de metales de última generación en todos nuestros puestos de control de inframuros.
-                    </p>
-                </div>
-            </article>
-
+            <?php if (!empty($noticias)): ?>
             <div class="reveal-on-scroll" style="display: flex; flex-direction: column; justify-content: center; align-items: center; background: rgba(125, 140, 69, 0.05); border: 2px dashed var(--light-border); border-radius: 16px; padding: 2rem; text-align: center; transition-delay: 0.2s">
                 <h3 style="font-size: 1.2rem; color: var(--light-text); margin-bottom: 1rem;">Más novedades en nuestro portal</h3>
                 <p style="font-size: 0.9rem; color: var(--light-muted); margin-bottom: 1.5rem;">Acceda a nuestro archivo completo de noticias, capacitaciones y comunicados oficiales.</p>
-                <a href="/noticias" class="btn-primary" style="width: 100%;">Ver todas las noticias</a>
+                <a href="<?= base_url('noticias') ?>" class="btn-primary" style="width: 100%;">Ver todas las noticias</a>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>

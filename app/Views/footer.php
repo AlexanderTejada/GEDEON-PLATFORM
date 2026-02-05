@@ -4,7 +4,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>Guardian Patagonico</h4>
-                    <p>Seguridad Privada de Alto Nivel en la provincia de San Juan.</p>
+                    <p>Seguridad Privada de Alto Nivel en la región de la Patagonia.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Enlaces</h4>
@@ -17,10 +17,10 @@
                 <div class="footer-col">
                     <h4>Cobertura</h4>
                     <ul>
-                        <li>Capital</li>
-                        <li>Rodeo (Iglesia)</li>
-                        <li>Jáchal</li>
-                        <li>Valle Fértil</li>
+                        <li>Comodoro Rivadavia</li>
+                        <li>Rawson</li>
+                        <li>Puerto Madryn</li>
+                        <li>Trelew</li>
                     </ul>
                 </div>
                 <div class="footer-col">

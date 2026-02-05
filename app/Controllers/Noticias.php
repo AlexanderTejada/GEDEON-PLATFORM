@@ -2,21 +2,39 @@
 
 namespace App\Controllers;
 
+use Config\NoticiasData;
+
 class Noticias extends BaseController
 {
     public function index(): string
     {
-        // TODO: Obtener noticias desde la base de datos
-        // $noticias = $this->noticiasModel->findAll();
+        // Obtenemos las noticias del archivo de configuración (nuestra "DB" hardcodeada)
+        $noticias = NoticiasData::$items;
 
-        return view('noticias');
+        return view('noticias', [
+            'noticias' => $noticias
+        ]);
     }
 
     public function detalle($slug = null): string
     {
-        // TODO: Mostrar detalle de una noticia específica
-        // $noticia = $this->noticiasModel->where('slug', $slug)->first();
+        $noticias = NoticiasData::$items;
+        
+        // Buscamos la noticia que coincida con el slug
+        $noticia = null;
+        foreach ($noticias as $item) {
+            if ($item['slug'] === $slug) {
+                $noticia = $item;
+                break;
+            }
+        }
 
-        return view('noticia_detalle');
+        if (!$noticia) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("La noticia '$slug' no existe.");
+        }
+
+        return view('noticia_detalle', [
+            'noticia' => $noticia
+        ]);
     }
 }
