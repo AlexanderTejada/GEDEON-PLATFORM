@@ -21,7 +21,7 @@ Seguridad Privada de Alto Nivel
                 <p>Presencia estratégica en los polos productivos más importantes del país. Protegemos lo que más importa en la Patagonia y Cuyo.</p>
                 <div class="cta-group">
                     <a href="#contacto" class="btn-primary">Solicitar Diagnóstico</a>
-                    <a href="#servicios" class="btn-outline">Nuestros Centros</a>
+                    <a href="#servicios" class="btn-outline">Nuestros Servicios</a>
                 </div>
             </div>
             <div class="video-container">
@@ -267,10 +267,10 @@ Seguridad Privada de Alto Nivel
                 </p>
             </div>
 
-            <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: stretch;">
+            <div class="contact-grid">
                 
                 <div class="reveal-on-scroll">
-                    <div style="background: var(--dark-card); border: 1px solid var(--dark-border); padding: 3rem; border-radius: 24px; height: 100%; display: flex; flex-direction: column; gap: 2.5rem;">
+                    <div class="contact-info-card">
                         
                         <!-- Info Item -->
                         <div style="display: flex; gap: 1.5rem;">
@@ -311,40 +311,37 @@ Seguridad Privada de Alto Nivel
                 </div>
 
                 <div class="reveal-on-scroll">
-                    <div style="background: var(--dark-card); border: 1px solid var(--dark-border); padding: 3rem; border-radius: 24px;">
-                        <h4 style="color: #fff; margin-bottom: 2rem; font-size: 1.5rem; font-family: 'Outfit';">Solicitar Diagnóstico de Riesgo</h4>
-                        <form action="#" method="POST" style="display: grid; gap: 1.5rem;">
-                            <div style="display: grid; gap: 0.8rem;">
-                                <label style="font-weight: 600; font-size: 0.85rem; color: var(--dark-muted); text-transform: uppercase; letter-spacing: 1px;">Razón Social / Empresa</label>
-                                <input type="text" placeholder="Ej: Minera del Sol S.A." style="background: rgba(255,255,255,0.03); color: #fff; padding: 1.2rem; border-radius: 12px; border: 1px solid var(--dark-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)'; this.style.background='rgba(255,255,255,0.05)'" onblur="this.style.borderColor='var(--dark-border)'; this.style.background='rgba(255,255,255,0.03)'">
+                    <div class="contact-action-card">
+                        <div style="margin-bottom: 2rem;">
+                            <div style="color: var(--primary); background: rgba(125, 140, 69, 0.1); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; border: 1px solid rgba(125, 140, 69, 0.2);">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"></path><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                             </div>
-                            
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-                                <div style="display: grid; gap: 0.8rem;">
-                                    <label style="font-weight: 600; font-size: 0.85rem; color: var(--dark-muted); text-transform: uppercase; letter-spacing: 1px;">Nombre de Contacto</label>
-                                    <input type="text" placeholder="Su nombre" style="background: rgba(255,255,255,0.03); color: #fff; padding: 1.2rem; border-radius: 12px; border: 1px solid var(--dark-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)';" onblur="this.style.borderColor='var(--dark-border)';">
-                                </div>
-                                <div style="display: grid; gap: 0.8rem;">
-                                    <label style="font-weight: 600; font-size: 0.85rem; color: var(--dark-muted); text-transform: uppercase; letter-spacing: 1px;">Teléfono</label>
-                                    <input type="tel" placeholder="+54..." style="background: rgba(255,255,255,0.03); color: #fff; padding: 1.2rem; border-radius: 12px; border: 1px solid var(--dark-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)';" onblur="this.style.borderColor='var(--dark-border)';">
-                                </div>
-                            </div>
+                            <h4 style="color: #fff; font-size: 1.8rem; font-family: 'Outfit'; margin-bottom: 1rem;">Solicitar Diagnóstico Táctico</h4>
+                            <p style="color: var(--dark-muted); font-size: 1.1rem; line-height: 1.6; max-width: 400px; margin: 0 auto;">
+                                Elija su vía de comunicación preferida. Nuestros especialistas responderán de forma inmediata.
+                            </p>
+                        </div>
 
-                            <div style="display: grid; gap: 0.8rem;">
-                                <label style="font-weight: 600; font-size: 0.85rem; color: var(--dark-muted); text-transform: uppercase; letter-spacing: 1px;">Correo Corporativo</label>
-                                <input type="email" placeholder="ejemplo@empresa.com.ar" style="background: rgba(255,255,255,0.03); color: #fff; padding: 1.2rem; border-radius: 12px; border: 1px solid var(--dark-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)';" onblur="this.style.borderColor='var(--dark-border)';">
-                            </div>
+                        <div style="display: grid; gap: 1rem; max-width: 400px; margin: 0 auto; width: 100%;">
+                            <!-- Botón de Email -->
+                            <a href="mailto:Maximilianocoll63@gmail.com?subject=Solicitud%20de%20Servicio%20-%20Guardi%C3%A1n%20Patag%C3%B3nico&body=Hola!%20Deseo%20solicitar%20un%20diagn%C3%B3stico%20de%20seguridad%20para%20mi%20empresa.%0A%0ARaz%C3%B3n%20Social:%20%0ANombre%20de%20Contacto:%20%0ATel%C3%A9fono:%20%0ANaturaleza%20del%20requerimiento:%20" 
+                               class="btn-primary" style="width: 100%; justify-content: center; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 12px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                Enviar por Correo
+                            </a>
 
-                            <div style="display: grid; gap: 0.8rem;">
-                                <label style="font-weight: 600; font-size: 0.85rem; color: var(--dark-muted); text-transform: uppercase; letter-spacing: 1px;">Naturaleza del Requerimiento</label>
-                                <textarea rows="4" placeholder="Describa brevemente el servicio o activo a proteger..." style="background: rgba(255,255,255,0.03); color: #fff; padding: 1.2rem; border-radius: 12px; border: 1px solid var(--dark-border); outline: none; transition: 0.3s; resize: none;" onfocus="this.style.borderColor='var(--primary)';" onblur="this.style.borderColor='var(--dark-border)';"></textarea>
-                            </div>
+                            <!-- Botón de Llamada -->
+                            <a href="tel:+5492645152154" class="btn-outline" style="width: 100%; justify-content: center; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; border-color: var(--primary); color: #fff;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 12px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                Llamar Ahora
+                            </a>
+                        </div>
 
-                            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem; font-size: 1rem;">
-                                Enviar Consulta Táctica
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 10px;"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                            </button>
-                        </form>
+                        <div style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--dark-border);">
+                            <p style="color: var(--dark-muted); font-size: 0.9rem;">
+                                Disponibilidad 24/7 para servicios críticos y respuesta a emergencias en zona cordillerana.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
