@@ -13,24 +13,30 @@ Seguridad Privada de Alto Nivel
         <div class="hero-accent hero-accent-1"></div>
         <div class="hero-accent hero-accent-2"></div>
         <div class="hero-accent hero-accent-3"></div>
-        <!-- Video de fondo con opacidad casi imperceptible -->
-        <div class="hero-bg-video">
-            <iframe src="https://www.youtube.com/embed/ApLnqFUtHWc?autoplay=1&mute=1&loop=1&playlist=ApLnqFUtHWc&controls=0&showinfo=0&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        <!-- 3D Model Hero -->
         <div class="container hero-grid">
             <div class="hero-content">
-                <span class="hero-badge">Seguridad Privada en la Patagonia</span>
+                <span class="hero-badge">Seguridad Privada en Patagonia y San Juan</span>
                 <h1>Protección<br><span class="text-gradient">Sin Compromiso</span></h1>
-                <p>Usted se concentra en producir. Nosotros nos encargamos de proteger lo que más importa.</p>
+                <p>Presencia estratégica en los polos productivos más importantes del país. Protegemos lo que más importa en la Patagonia y Cuyo.</p>
                 <div class="cta-group">
                     <a href="#contacto" class="btn-primary">Solicitar Diagnóstico</a>
-                    <a href="#servicios" class="btn-outline">Ver Servicios</a>
+                    <a href="#servicios" class="btn-outline">Nuestros Centros</a>
                 </div>
             </div>
             <div class="video-container">
-                <div class="video-wrapper">
-                    <!-- YouTube Embed clean -->
-                    <iframe width="1013" height="570" src="https://www.youtube.com/embed/ApLnqFUtHWc?autoplay=1&mute=1&loop=1&playlist=ApLnqFUtHWc" title="Company Profile Video - Ultimate Security Services | Creative Company Profile Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-wrapper" style="background: transparent; box-shadow: none; border: none; overflow: visible;">
+                    <model-viewer
+                        id="logo-3d"
+                        src="<?= base_url('assets/models/logo.glb') ?>"
+                        alt="Logo 3D Guardián Patagónico"
+                        autoplay
+                        camera-orbit="0deg 75deg 105%"
+                        environment-image="neutral"
+                        shadow-intensity="0"
+                        exposure="0.5"
+                        style="width: 100%; height: 500px; --poster-color: transparent;">
+                    </model-viewer>
                 </div>
             </div>
         </div>
@@ -75,7 +81,7 @@ Seguridad Privada de Alto Nivel
                 <h2>Compromiso y Responsabilidad</h2>
                 <br>
                 <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">
-                    En Guardian Patagonico somos una empresa de seguridad privada con presencia en la Patagonia, Comodoro Rivadavia.<br><br>
+                    En Guardián Patagónico somos una empresa de seguridad privada con presencia en la Patagonia y San Juan.<br><br>
                     Somos una empresa seria y responsable, comprometida con la protección integral de personas, bienes e instalaciones. Contamos con un equipo preparado y capacitado con título habilitante, brindando disponibilidad 24/7 para responder a las más altas exigencias de seguridad.
                 </p>
             </div>
@@ -169,28 +175,30 @@ Seguridad Privada de Alto Nivel
         <div class="reveal-on-scroll" style="max-width: 900px; margin: 0 auto; text-align: center;">
             
             <span class="section-label">Despliegue Territorial</span>
-            <h2 class="text-gradient" style="font-size: clamp(2.5rem, 4vw, 3.8rem); margin-bottom: 2rem;">Operatividad Total en la Patagonia</h2>
+            <h2 class="text-gradient" style="font-size: clamp(2.5rem, 4vw, 3.8rem); margin-bottom: 2rem;">Presencia en Puntos Estratégicos</h2>
             
             <p style="color: var(--dark-muted); font-size: 1.2rem; line-height: 1.8; margin-bottom: 4rem;">
-                Nuestra estructura está diseñada para la movilidad táctica. Operamos directamente en los objetivos de nuestros clientes, con unidades desplegadas estratégicamente en Comodoro Rivadavia y alrededores para garantizar tiempos de respuesta inmediatos.
+                Nuestra estructura está diseñada para la movilidad táctica y el control de activos críticos en regiones clave para la industria minera y energética.
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; text-align: left;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; text-align: left;">
                 
-                <div style="background: var(--dark-card); border: 1px solid var(--dark-border); padding: 2.5rem; border-radius: 20px; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--dark-border)'">
+                <!-- Nodo Patagonia -->
+                <div style="background: var(--dark-card); border: 1px solid var(--dark-border); padding: 3rem; border-radius: 24px; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--dark-border)'">
                     <div style="color: var(--primary); margin-bottom: 1.5rem;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     </div>
-                    <h4 style="color: #fff; font-family: 'Outfit'; font-size: 1.3rem; margin-bottom: 1rem;">Unidades Móviles</h4>
-                    <p style="color: var(--dark-muted); font-size: 0.95rem;">Desplazamiento constante hacia yacimientos, barrios privados y plantas industriales sin depender de bases fijas.</p>
+                    <h4 style="color: #fff; font-family: 'Outfit'; font-size: 1.5rem; margin-bottom: 1rem;">Centro Operativo Patagonia</h4>
+                    <p style="color: var(--dark-muted); font-size: 1rem; line-height: 1.6;">Base logística en Comodoro Rivadavia con alcance a yacimientos y plantas industriales en toda la cuenca del Golfo San Jorge.</p>
                 </div>
 
-                <div style="background: var(--dark-card); border: 1px solid var(--dark-border); padding: 2.5rem; border-radius: 20px; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--dark-border)'">
+                <!-- Nodo San Juan -->
+                <div style="background: var(--dark-card); border: 1px solid var(--dark-border); padding: 3rem; border-radius: 24px; transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--dark-border)'">
                     <div style="color: var(--primary); margin-bottom: 1.5rem;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     </div>
-                    <h4 style="color: #fff; font-family: 'Outfit'; font-size: 1.3rem; margin-bottom: 1rem;">Enfoque Comodoro</h4>
-                    <p style="color: var(--dark-muted); font-size: 0.95rem;">Priorizamos el cordón industrial del Golfo San Jorge con personal local que conoce el terreno y sus riesgos.</p>
+                    <h4 style="color: #fff; font-family: 'Outfit'; font-size: 1.5rem; margin-bottom: 1rem;">Centro Operativo San Juan</h4>
+                    <p style="color: var(--dark-muted); font-size: 1rem; line-height: 1.6;">Ubicación estratégica en Iglesia para la protección de proyectos mineros y activos críticos en la región cordillerana.</p>
                 </div>
 
             </div>
@@ -251,4 +259,32 @@ Seguridad Privada de Alto Nivel
         </div>
     </div>
 </section>
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>
+    <script>
+        const modelViewer = document.querySelector('#logo-3d');
+
+        modelViewer.addEventListener('load', () => {
+            const maxAngle = 15;
+            const baseY = 75;
+            let targetX = 0, targetY = baseY;
+            let currentX = 0, currentY = baseY;
+
+            document.addEventListener('mousemove', (e) => {
+                const nx = (e.clientX / window.innerWidth - 0.5) * 2;
+                const ny = (e.clientY / window.innerHeight - 0.5) * 2;
+                targetX = Math.max(-maxAngle, Math.min(maxAngle, nx * maxAngle));
+                targetY = Math.max(baseY - maxAngle, Math.min(baseY + maxAngle, baseY - ny * maxAngle * 0.4));
+            });
+
+            const animate = () => {
+                currentX += (targetX - currentX) * 0.04;
+                currentY += (targetY - currentY) * 0.04;
+                modelViewer.cameraOrbit = `${currentX}deg ${currentY}deg 105%`;
+                requestAnimationFrame(animate);
+            };
+            animate();
+        });
+    </script>
 <?= $this->endSection() ?>

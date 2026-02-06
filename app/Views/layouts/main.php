@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $this->renderSection('title') ?> | Guardian Patagonico</title>
-    <meta name="description" content="Seguridad Privada Corporativa en la Patagonia. Protección de activos críticos con tecnología y personal de élite.">
+    <title><?= $this->renderSection('title') ?> | Guardián Patagónico</title>
+    <meta name="description" content="Seguridad Privada Corporativa en la Patagonia y San Juan. Protección de activos críticos con tecnología y personal de élite en la Patagonia y San Juan.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,9 @@
     
     <!-- Main CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
+
+    <!-- 3D Model Viewer -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     
     <?= $this->renderSection('styles') ?>
 </head>
