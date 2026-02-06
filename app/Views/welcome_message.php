@@ -292,10 +292,10 @@ Seguridad Privada de Alto Nivel
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                             </div>
                             <div>
-                                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.2rem;">Línea Directa 24/7</h4>
+                                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.2rem;">Línea Directa San Juan</h4>
                                 <p style="color: var(--dark-muted); line-height: 1.6; font-size: 0.95rem;">
-                                    Central Operativa: +54 9 264 412-5678<br>
-                                    Administración: +54 9 297 452-1234
+                                    <a href="https://wa.me/5492645152154" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='inherit'">+54 9 264 515-2154</a><br>
+                                    <a href="https://wa.me/5492644401992" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='inherit'">+54 9 264 440-1992</a>
                                 </p>
                             </div>
                         </div>

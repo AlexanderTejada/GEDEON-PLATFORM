@@ -11,6 +11,10 @@
                         Proyectada S/N, Barrio Renacer,<br>
                         Rodeo, Iglesia, San Juan.
                     </p>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--dark-muted);">
+                        <a href="https://wa.me/5492645152154" target="_blank" style="color: inherit;">+54 9 264 515-2154</a><br>
+                        <a href="https://wa.me/5492644401992" target="_blank" style="color: inherit;">+54 9 264 440-1992</a>
+                    </p>
                 </div>
                 <div class="footer-col">
                     <h4>Enlaces</h4>
