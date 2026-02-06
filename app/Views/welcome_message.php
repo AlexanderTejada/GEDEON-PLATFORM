@@ -33,8 +33,8 @@ Seguridad Privada de Alto Nivel
                         autoplay
                         camera-orbit="0deg 75deg 105%"
                         environment-image="neutral"
-                        shadow-intensity="0"
-                        exposure="0.5"
+                        shadow-intensity="5"
+                        exposure="0.3"
                         style="width: 100%; height: 500px; --poster-color: transparent;">
                     </model-viewer>
                 </div>
@@ -249,39 +249,161 @@ Seguridad Privada de Alto Nivel
                 </div>
             <?php endif; ?>
 
-            <?php if (!empty($noticias)): ?>
-            <div class="reveal-on-scroll" style="display: flex; flex-direction: column; justify-content: center; align-items: center; background: rgba(125, 140, 69, 0.05); border: 2px dashed var(--light-border); border-radius: 16px; padding: 2rem; text-align: center; transition-delay: 0.2s">
-                <h3 style="font-size: 1.2rem; color: var(--light-text); margin-bottom: 1rem;">Más novedades en nuestro portal</h3>
-                <p style="font-size: 0.9rem; color: var(--light-muted); margin-bottom: 1.5rem;">Acceda a nuestro archivo completo de noticias, capacitaciones y comunicados oficiales.</p>
-                <a href="<?= base_url('noticias') ?>" class="btn-primary" style="width: 100%;">Ver todas las noticias</a>
+    <!-- Contacto -->
+    <section id="contacto" class="section-padding" style="background-color: #fff;">
+        <div class="container">
+            <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: start;">
+                <div class="reveal-on-scroll">
+                    <span class="section-label" style="margin-left: 0;">Contacto</span>
+                    <h2 style="color: var(--light-text); margin-bottom: 2rem;">¿Listo para elevar su nivel de seguridad?</h2>
+                    <p style="color: var(--light-muted); margin-bottom: 3rem; font-size: 1.1rem;">
+                        Póngase en contacto con nuestros especialistas para recibir un asesoramiento personalizado y un diagnóstico de seguridad adaptado a sus necesidades.
+                    </p>
+                    
+                    <div class="contact-info" style="display: grid; gap: 2rem;">
+                        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                            <div style="color: var(--primary); background: rgba(125, 140, 69, 0.1); padding: 1rem; border-radius: 12px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--light-text); margin-bottom: 0.5rem;">Base Operativa San Juan</h4>
+                                <p style="color: var(--light-muted); line-height: 1.6;">
+                                    Proyectada S/N, Barrio Renacer,<br>
+                                    Rodeo, Iglesia, San Juan.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                            <div style="color: var(--primary); background: rgba(125, 140, 69, 0.1); padding: 1rem; border-radius: 12px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--light-text); margin-bottom: 0.5rem;">Teléfonos de Contacto</h4>
+                                <p style="color: var(--light-muted); line-height: 1.6;">
+                                    +54 9 297 452-1234 (Patagonia)<br>
+                                    +54 9 264 412-5678 (San Juan)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                            <div style="color: var(--primary); background: rgba(125, 140, 69, 0.1); padding: 1rem; border-radius: 12px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--light-text); margin-bottom: 0.5rem;">Correo Electrónico</h4>
+                                <p style="color: var(--light-muted); line-height: 1.6;">
+                                    info@guardianpatagonico.com.ar<br>
+                                    operaciones@guardianpatagonico.com.ar
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-on-scroll" style="background: var(--light-bg); padding: 3rem; border-radius: 24px; border: 1px solid var(--light-border);">
+                    <form action="#" method="POST" style="display: grid; gap: 1.5rem;">
+                        <div style="display: grid; gap: 0.5rem;">
+                            <label style="font-weight: 600; font-size: 0.9rem; color: var(--light-text);">Nombre Completo</label>
+                            <input type="text" placeholder="Ej: Juan Pérez" style="padding: 1rem; border-radius: 12px; border: 1px solid var(--light-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--light-border)'">
+                        </div>
+                        <div style="display: grid; gap: 0.5rem;">
+                            <label style="font-weight: 600; font-size: 0.9rem; color: var(--light-text);">Empresa / Organización</label>
+                            <input type="text" placeholder="Nombre de su empresa" style="padding: 1rem; border-radius: 12px; border: 1px solid var(--light-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--light-border)'">
+                        </div>
+                        <div style="display: grid; gap: 0.5rem;">
+                            <label style="font-weight: 600; font-size: 0.9rem; color: var(--light-text);">Correo Electrónico</label>
+                            <input type="email" placeholder="ejemplo@empresa.com" style="padding: 1rem; border-radius: 12px; border: 1px solid var(--light-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--light-border)'">
+                        </div>
+                        <div style="display: grid; gap: 0.5rem;">
+                            <label style="font-weight: 600; font-size: 0.9rem; color: var(--light-text);">Mensaje</label>
+                            <textarea rows="4" placeholder="¿En qué podemos ayudarle?" style="padding: 1rem; border-radius: 12px; border: 1px solid var(--light-border); outline: none; transition: 0.3s; resize: none;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--light-border)'"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">Enviar Solicitud</button>
+                    </form>
+                </div>
             </div>
-            <?php endif; ?>
         </div>
-    </div>
-</section>
+    </section>
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts') ?>
-    <script>
+    <script type="module">
+        import { DirectionalLight, Color } from 'https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.min.js';
+
         const modelViewer = document.querySelector('#logo-3d');
 
         modelViewer.addEventListener('load', () => {
-            const maxAngle = 15;
-            const baseY = 75;
-            let targetX = 0, targetY = baseY;
-            let currentX = 0, currentY = baseY;
+
+            // ============ CONFIG LUZ ============
+            const lightX     = 0;       // izquierda(-) / derecha(+)
+            const lightY     = 0;       // abajo(-) / arriba(+)
+            const lightZ     = 5;       // atras(-) / frente(+)
+            const lightPower = 5;       // intensidad de la luz
+            const lightColor = 0xffffff; // color (hex) - celeste para test
+            // ====================================
+
+            // ============ CONFIG CURSOR ============
+            const maxAngle   = 10;    // limite de rotacion en grados
+            const lerpSpeed  = 0.05;  // suavidad (menor = mas lento)
+            const cursorMult = 1.6;   // sensibilidad al cursor (menor = mas sutil)
+            // =======================================
+
+            // ============ CONFIG ANIMACION IDLE ====
+            const idleSpeed   = 0.016; // velocidad de oscilacion
+            const idleAmountX = 10.5;   // amplitud horizontal (grados)
+            const idleAmountY = 0;     // amplitud vertical (grados)
+            // =======================================
+
+            // Buscar escena Three.js
+            const findScene = (obj, depth, visited) => {
+                if (depth > 4 || visited.has(obj)) return null;
+                visited.add(obj);
+                const keys = [...Object.getOwnPropertyNames(obj), ...Object.getOwnPropertySymbols(obj)];
+                for (const key of keys) {
+                    try {
+                        const val = obj[key];
+                        if (!val || typeof val !== 'object') continue;
+                        if (typeof val.traverse === 'function') return val;
+                        if (depth < 3) {
+                            const found = findScene(val, depth + 1, visited);
+                            if (found) return found;
+                        }
+                    } catch(e) {}
+                }
+                return null;
+            };
+
+            const scene = findScene(modelViewer, 0, new Set());
+            const light = new DirectionalLight(lightColor, lightPower);
+            light.position.set(lightX, lightY, lightZ);
+
+            if (scene) {
+                scene.add(light);
+                console.log('[3D] Luz creada y agregada a la escena');
+            }
+
+            const baseX = 0, baseY = 75;
+            let targetX = baseX, targetY = baseY;
+            let currentX = baseX, currentY = baseY;
+            let time = 0;
 
             document.addEventListener('mousemove', (e) => {
-                const nx = (e.clientX / window.innerWidth - 0.5) * 2;
-                const ny = (e.clientY / window.innerHeight - 0.5) * 2;
-                targetX = Math.max(-maxAngle, Math.min(maxAngle, nx * maxAngle));
-                targetY = Math.max(baseY - maxAngle, Math.min(baseY + maxAngle, baseY - ny * maxAngle * 0.4));
+                const nx = (e.clientX / window.innerWidth - 0.5) * 8;
+                const ny = (e.clientY / window.innerHeight - 0.5) * 8;
+                targetX = Math.max(-maxAngle, Math.min(maxAngle, -nx * maxAngle * cursorMult));
+                targetY = baseY + Math.max(-maxAngle * 0.3, Math.min(maxAngle * 0.5, ny * maxAngle * 0.3));
             });
 
             const animate = () => {
-                currentX += (targetX - currentX) * 0.04;
-                currentY += (targetY - currentY) * 0.04;
-                modelViewer.cameraOrbit = `${currentX}deg ${currentY}deg 105%`;
+                time += idleSpeed;
+                const idleX = Math.sin(time) * idleAmountX;
+                const idleY = Math.cos(time * 0.6) * idleAmountY;
+
+                currentX += (targetX + idleX - currentX) * lerpSpeed;
+                currentY += (targetY + idleY - currentY) * lerpSpeed;
+                modelViewer.cameraOrbit = `${currentX}deg ${currentY}deg 80%`;
                 requestAnimationFrame(animate);
             };
             animate();
