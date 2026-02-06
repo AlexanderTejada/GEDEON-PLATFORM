@@ -248,81 +248,106 @@ Seguridad Privada de Alto Nivel
                     <a href="<?= base_url('noticias') ?>" class="btn-primary">Ver Portal de Noticias</a>
                 </div>
             <?php endif; ?>
+        </div>
+    </div>
+</section>
 
     <!-- Contacto -->
-    <section id="contacto" class="section-padding" style="background-color: #fff;">
-        <div class="container">
-            <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: start;">
+    <section id="contacto" class="section-padding" style="background-color: var(--dark-bg); position: relative; overflow: hidden;">
+        <!-- Elementos decorativos tácticos -->
+        <div class="hero-pattern" style="opacity: 0.05;"></div>
+        <div style="position: absolute; top: -10%; right: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(125, 140, 69, 0.1) 0%, transparent 70%); pointer-events: none;"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="section-header reveal-on-scroll" style="text-align: center; max-width: 800px; margin: 0 auto 5rem;">
+                <span class="section-label">Contacto</span>
+                <h2 class="text-gradient" style="font-size: clamp(2.5rem, 4vw, 3.8rem); margin-bottom: 1.5rem;">Despliegue de Seguridad</h2>
+                <p style="color: var(--dark-muted); font-size: 1.1rem;">
+                    Nuestras bases operativas están estratégicamente ubicadas para garantizar una respuesta inmediata en los polos industriales y mineros más exigentes.
+                </p>
+            </div>
+
+            <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: stretch;">
+                
                 <div class="reveal-on-scroll">
-                    <span class="section-label" style="margin-left: 0;">Contacto</span>
-                    <h2 style="color: var(--light-text); margin-bottom: 2rem;">¿Listo para elevar su nivel de seguridad?</h2>
-                    <p style="color: var(--light-muted); margin-bottom: 3rem; font-size: 1.1rem;">
-                        Póngase en contacto con nuestros especialistas para recibir un asesoramiento personalizado y un diagnóstico de seguridad adaptado a sus necesidades.
-                    </p>
-                    
-                    <div class="contact-info" style="display: grid; gap: 2rem;">
-                        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
-                            <div style="color: var(--primary); background: rgba(125, 140, 69, 0.1); padding: 1rem; border-radius: 12px;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <div style="background: var(--dark-card); border: 1px solid var(--dark-border); padding: 3rem; border-radius: 24px; height: 100%; display: flex; flex-direction: column; gap: 2.5rem;">
+                        
+                        <!-- Info Item -->
+                        <div style="display: flex; gap: 1.5rem;">
+                            <div style="color: var(--primary); background: rgba(125, 140, 69, 0.1); width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid rgba(125, 140, 69, 0.2);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             </div>
                             <div>
-                                <h4 style="color: var(--light-text); margin-bottom: 0.5rem;">Base Operativa San Juan</h4>
-                                <p style="color: var(--light-muted); line-height: 1.6;">
+                                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.2rem;">Base San Juan (Iglesia)</h4>
+                                <p style="color: var(--dark-muted); line-height: 1.6; font-size: 0.95rem;">
                                     Proyectada S/N, Barrio Renacer,<br>
                                     Rodeo, Iglesia, San Juan.
                                 </p>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
-                            <div style="color: var(--primary); background: rgba(125, 140, 69, 0.1); padding: 1rem; border-radius: 12px;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <!-- Info Item -->
+                        <div style="display: flex; gap: 1.5rem;">
+                            <div style="color: var(--primary); background: rgba(125, 140, 69, 0.1); width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid rgba(125, 140, 69, 0.2);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                             </div>
                             <div>
-                                <h4 style="color: var(--light-text); margin-bottom: 0.5rem;">Teléfonos de Contacto</h4>
-                                <p style="color: var(--light-muted); line-height: 1.6;">
-                                    +54 9 297 452-1234 (Patagonia)<br>
-                                    +54 9 264 412-5678 (San Juan)
+                                <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.2rem;">Línea Directa 24/7</h4>
+                                <p style="color: var(--dark-muted); line-height: 1.6; font-size: 0.95rem;">
+                                    Central Operativa: +54 9 264 412-5678<br>
+                                    Administración: +54 9 297 452-1234
                                 </p>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
-                            <div style="color: var(--primary); background: rgba(125, 140, 69, 0.1); padding: 1rem; border-radius: 12px;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            </div>
-                            <div>
-                                <h4 style="color: var(--light-text); margin-bottom: 0.5rem;">Correo Electrónico</h4>
-                                <p style="color: var(--light-muted); line-height: 1.6;">
-                                    info@guardianpatagonico.com.ar<br>
-                                    operaciones@guardianpatagonico.com.ar
-                                </p>
-                            </div>
+                        <!-- Map Embed -->
+                        <div style="flex-grow: 1; border-radius: 16px; overflow: hidden; border: 1px solid var(--dark-border); min-height: 250px;">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13854.498414457318!2d-69.1388!3d-30.2096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96827364658e390d%3A0xc63806a6c4b2675d!2sRodeo%2C%20San%20Juan!5e0!3m2!1ses-419!2sar!4v1707241234567!5m2!1ses-419!2sar" 
+                                width="100%" height="100%" style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
                     </div>
                 </div>
 
-                <div class="reveal-on-scroll" style="background: var(--light-bg); padding: 3rem; border-radius: 24px; border: 1px solid var(--light-border);">
-                    <form action="#" method="POST" style="display: grid; gap: 1.5rem;">
-                        <div style="display: grid; gap: 0.5rem;">
-                            <label style="font-weight: 600; font-size: 0.9rem; color: var(--light-text);">Nombre Completo</label>
-                            <input type="text" placeholder="Ej: Juan Pérez" style="padding: 1rem; border-radius: 12px; border: 1px solid var(--light-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--light-border)'">
-                        </div>
-                        <div style="display: grid; gap: 0.5rem;">
-                            <label style="font-weight: 600; font-size: 0.9rem; color: var(--light-text);">Empresa / Organización</label>
-                            <input type="text" placeholder="Nombre de su empresa" style="padding: 1rem; border-radius: 12px; border: 1px solid var(--light-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--light-border)'">
-                        </div>
-                        <div style="display: grid; gap: 0.5rem;">
-                            <label style="font-weight: 600; font-size: 0.9rem; color: var(--light-text);">Correo Electrónico</label>
-                            <input type="email" placeholder="ejemplo@empresa.com" style="padding: 1rem; border-radius: 12px; border: 1px solid var(--light-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--light-border)'">
-                        </div>
-                        <div style="display: grid; gap: 0.5rem;">
-                            <label style="font-weight: 600; font-size: 0.9rem; color: var(--light-text);">Mensaje</label>
-                            <textarea rows="4" placeholder="¿En qué podemos ayudarle?" style="padding: 1rem; border-radius: 12px; border: 1px solid var(--light-border); outline: none; transition: 0.3s; resize: none;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--light-border)'"></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">Enviar Solicitud</button>
-                    </form>
+                <div class="reveal-on-scroll">
+                    <div style="background: var(--dark-card); border: 1px solid var(--dark-border); padding: 3rem; border-radius: 24px;">
+                        <h4 style="color: #fff; margin-bottom: 2rem; font-size: 1.5rem; font-family: 'Outfit';">Solicitar Diagnóstico de Riesgo</h4>
+                        <form action="#" method="POST" style="display: grid; gap: 1.5rem;">
+                            <div style="display: grid; gap: 0.8rem;">
+                                <label style="font-weight: 600; font-size: 0.85rem; color: var(--dark-muted); text-transform: uppercase; letter-spacing: 1px;">Razón Social / Empresa</label>
+                                <input type="text" placeholder="Ej: Minera del Sol S.A." style="background: rgba(255,255,255,0.03); color: #fff; padding: 1.2rem; border-radius: 12px; border: 1px solid var(--dark-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)'; this.style.background='rgba(255,255,255,0.05)'" onblur="this.style.borderColor='var(--dark-border)'; this.style.background='rgba(255,255,255,0.03)'">
+                            </div>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div style="display: grid; gap: 0.8rem;">
+                                    <label style="font-weight: 600; font-size: 0.85rem; color: var(--dark-muted); text-transform: uppercase; letter-spacing: 1px;">Nombre de Contacto</label>
+                                    <input type="text" placeholder="Su nombre" style="background: rgba(255,255,255,0.03); color: #fff; padding: 1.2rem; border-radius: 12px; border: 1px solid var(--dark-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)';" onblur="this.style.borderColor='var(--dark-border)';">
+                                </div>
+                                <div style="display: grid; gap: 0.8rem;">
+                                    <label style="font-weight: 600; font-size: 0.85rem; color: var(--dark-muted); text-transform: uppercase; letter-spacing: 1px;">Teléfono</label>
+                                    <input type="tel" placeholder="+54..." style="background: rgba(255,255,255,0.03); color: #fff; padding: 1.2rem; border-radius: 12px; border: 1px solid var(--dark-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)';" onblur="this.style.borderColor='var(--dark-border)';">
+                                </div>
+                            </div>
+
+                            <div style="display: grid; gap: 0.8rem;">
+                                <label style="font-weight: 600; font-size: 0.85rem; color: var(--dark-muted); text-transform: uppercase; letter-spacing: 1px;">Correo Corporativo</label>
+                                <input type="email" placeholder="ejemplo@empresa.com.ar" style="background: rgba(255,255,255,0.03); color: #fff; padding: 1.2rem; border-radius: 12px; border: 1px solid var(--dark-border); outline: none; transition: 0.3s;" onfocus="this.style.borderColor='var(--primary)';" onblur="this.style.borderColor='var(--dark-border)';">
+                            </div>
+
+                            <div style="display: grid; gap: 0.8rem;">
+                                <label style="font-weight: 600; font-size: 0.85rem; color: var(--dark-muted); text-transform: uppercase; letter-spacing: 1px;">Naturaleza del Requerimiento</label>
+                                <textarea rows="4" placeholder="Describa brevemente el servicio o activo a proteger..." style="background: rgba(255,255,255,0.03); color: #fff; padding: 1.2rem; border-radius: 12px; border: 1px solid var(--dark-border); outline: none; transition: 0.3s; resize: none;" onfocus="this.style.borderColor='var(--primary)';" onblur="this.style.borderColor='var(--dark-border)';"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem; font-size: 1rem;">
+                                Enviar Consulta Táctica
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 10px;"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </button>
+                        </form>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
