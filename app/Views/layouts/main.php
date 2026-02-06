@@ -3,8 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $this->renderSection('title') ?> | Guardián Patagónico</title>
-    <meta name="description" content="Seguridad Privada Corporativa en la Patagonia y San Juan. Protección de activos críticos con tecnología y personal de élite en la Patagonia y San Juan.">
+    <title><?= $this->renderSection('title') ?> | Guardián Patagónico RC</title>
+    <meta name="description" content="Seguridad Privada Corporativa en la Patagonia y San Juan. Especialistas en protección de activos críticos, minería y energía con tecnología de élite.">
+    <meta name="keywords" content="seguridad privada, san juan, patagonia, seguridad minera, protección de activos, custodia, vigilancia, rodeo, iglesia, comodoro rivadavia">
+    <link rel="canonical" href="<?= current_url() ?>">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('favicon_io/apple-touch-icon.png') ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('favicon_io/favicon-32x32.png') ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('favicon_io/favicon-16x16.png') ?>">
+    <link rel="manifest" href="<?= base_url('favicon_io/site.webmanifest') ?>">
+    <link rel="shortcut icon" href="<?= base_url('favicon_io/favicon.ico') ?>">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?= current_url() ?>">
+    <meta property="og:title" content="<?= $this->renderSection('title') ?> | Guardián Patagónico RC">
+    <meta property="og:description" content="Seguridad Privada Corporativa de alto nivel en San Juan y Patagonia. Protección táctica para la industria y minería.">
+    <meta property="og:image" content="<?= base_url('assets/img/logo/logo-hero.png') ?>">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<?= current_url() ?>">
+    <meta property="twitter:title" content="<?= $this->renderSection('title') ?> | Guardián Patagónico RC">
+    <meta property="twitter:description" content="Seguridad Privada Corporativa de alto nivel en San Juan y Patagonia. Protección táctica para la industria y minería.">
+    <meta property="twitter:image" content="<?= base_url('assets/img/logo/logo-hero.png') ?>">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

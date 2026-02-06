@@ -1,2 +1,5 @@
 User-agent: *
-Disallow: 
+Allow: /
+
+# Sitemaps (Update with your final domain)
+# Sitemap: https://www.guardianpatagonico.com.ar/sitemap.xml
