@@ -294,8 +294,8 @@ Seguridad Privada de Alto Nivel
                             <div>
                                 <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.2rem;">Línea Directa San Juan</h4>
                                 <p style="color: var(--dark-muted); line-height: 1.6; font-size: 0.95rem;">
-                                    <a href="https://wa.me/5492645152154" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='inherit'">+54 9 264 515-2154</a><br>
-                                    <a href="https://wa.me/5492644401992" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='inherit'">+54 9 264 440-1992</a>
+                                    <a href="https://wa.me/5492645152154?text=Hola!%20Me%20contacto%20desde%20la%20web%20de%20Guardi%C3%A1n%20Patag%C3%B3nico%20para%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20seguridad." target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='inherit'">+54 9 264 515-2154</a><br>
+                                    <a href="https://wa.me/5492644401992?text=Hola!%20Me%20contacto%20desde%20la%20web%20de%20Guardi%C3%A1n%20Patag%C3%B3nico%20para%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20seguridad." target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='inherit'">+54 9 264 440-1992</a>
                                 </p>
                             </div>
                         </div>

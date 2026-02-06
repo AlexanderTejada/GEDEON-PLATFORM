@@ -12,8 +12,8 @@
                         Rodeo, Iglesia, San Juan.
                     </p>
                     <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--dark-muted);">
-                        <a href="https://wa.me/5492645152154" target="_blank" style="color: inherit;">+54 9 264 515-2154</a><br>
-                        <a href="https://wa.me/5492644401992" target="_blank" style="color: inherit;">+54 9 264 440-1992</a>
+                        <a href="https://wa.me/5492645152154?text=Hola!%20Me%20contacto%20desde%20la%20web%20de%20Guardi%C3%A1n%20Patag%C3%B3nico%20para%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20seguridad." target="_blank" style="color: inherit;">+54 9 264 515-2154</a><br>
+                        <a href="https://wa.me/5492644401992?text=Hola!%20Me%20contacto%20desde%20la%20web%20de%20Guardi%C3%A1n%20Patag%C3%B3nico%20para%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20seguridad." target="_blank" style="color: inherit;">+54 9 264 440-1992</a>
                     </p>
                 </div>
                 <div class="footer-col">
