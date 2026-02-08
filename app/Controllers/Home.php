@@ -11,7 +11,7 @@ class Home extends BaseController
         // Obtenemos las últimas 2 noticias para mostrar en el Home
         $noticias = array_slice(NoticiasData::$items, 0, 2);
 
-        return view('welcome_message', [
+        return view('home', [
             'noticias' => $noticias
         ]);
     }
